@@ -1,0 +1,52 @@
+@import "../../assets/styles/theme/theme_variables";
+
+@import url("https://use.typekit.net/att2ajc.css");
+
+:root {
+    font-family: futura-pt,
+        "helvetica",
+        times,
+        serif;
+}
+
+// Typography
+$headings-font-family: futura-pt,
+"helvetica",
+times,
+serif;
+$headings-font-weight: 700;
+
+$font-family-sans-serif: futura-pt,
+sans-serif;
+$font-family-base: futura-pt,
+"helvetica",
+times,
+serif;
+
+$line-height-base: 1.6;
+
+$gray-300: $gray-500;
+$font-weight-base: 400;
+$font-weight-normal: $font-weight-base;
+$font-weight-bold: 700;
+
+// Colors
+$primary: #4CAAB1;
+$secondary: #121212;
+$success: #21a77a;
+$info: #f7f7f9;
+$warning: #ec971f;
+$danger: #843534;
+$dark: #000000;
+$light: #ffffff;
+
+$link-hover-color: #333333;
+$link-color: #121212;
+
+$gray-500: #d2d2d2;
+$gray-600: rgba(151, 151, 151, 1);
+$gray-700: #2b2b2b;
+$gray-800: #767676;
+$gray-900: #4a4a4a;
+
+$body-color: #4a4a4a;
