@@ -222,7 +222,7 @@ body {
 @media only screen and (min-width: 768px) {
 
 	body.home #page-wrapper {
-		margin-top: -108px;
+		// margin-top: -108px;
 	}
 }
 
@@ -498,9 +498,10 @@ p.wp-block-subhead,
 .entry-content ol:not(.wp-block-gallery) li,
 .entry-content ul:not(.blocks-gallery-grid) li {
 	margin: 10px 0px;
+	list-style: none;
 }
 
-.editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li:before,
+.editor-styles-wrapper .wp-block[data-type="core/list"] ul li:before,
 .editor-styles-wrapper .wp-block-latest-posts li:before,
 .entry-content ul:not(.blocks-gallery-grid) li:before {
 	font-size: 14px;
@@ -520,6 +521,11 @@ p.wp-block-subhead,
 .entry-content ol li:before,
 .editor-styles-wrapper ol li:before {
 	color: $primary;
+}
+
+.is-style-light-list li,
+.is-style-light-list li a {
+	color: $light;
 }
 
 .editor-styles-wrapper ul li:before,
@@ -549,16 +555,16 @@ p.wp-block-subhead,
 	color: $primary;
 }
 
-.editor-styles-wrapper .editor-rich-text ul.dark-list li,
+.editor-styles-wrapper .block-editor-rich-text ul.dark-list li,
 .entry-content ul.dark-list li,
-.editor-styles-wrapper .editor-rich-text ol.dark-list li,
+.editor-styles-wrapper .block-editor-rich-text ol.dark-list li,
 .entry-content ol.dark-list li {
 	color: $body-color;
 }
 
-.editor-styles-wrapper .editor-rich-text ul.light-list li,
+.editor-styles-wrapper .block-editor-rich-text ul.light-list li,
 .entry-content ul.light-list li,
-.editor-styles-wrapper .editor-rich-text ol.light-list li,
+.editor-styles-wrapper .block-editor-rich-text ol.light-list li,
 .entry-content ol.light-list li {
 	color: $light;
 }

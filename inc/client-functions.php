@@ -73,11 +73,16 @@ if ( ! function_exists( 'c9_hide_font_setting' ) ) {
 include("woocommerce-functions.php");
 
 /****************************************************************************************/
-/* ACF */
+/* Custom Block Styles */
 /****************************************************************************************/
-
-define( 'ACF_LITE' , true );
-
+// Registers a style variation for headings (blueprints behind heading)
+register_block_style(
+    'core/list',
+    array(
+        'name'         => 'light-list',
+        'label'        => __( 'White Text' ),
+    )
+);
 /****************************************************************************************/
 
 /****************************************************************************************/

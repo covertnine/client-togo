@@ -93,3 +93,9 @@ div[data-type="c9-blocks/column-container"] .editor-block-list__block-edit.block
 	margin-bottom: 15px;
 	margin-top: 15px;
 }
+
+/* list item additional block styles */
+.editor-styles-wrapper .is-style-light-list li,
+.editor-styles-wrapper .is-style-light-list li a {
+	color: $light;
+}
