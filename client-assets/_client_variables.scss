@@ -1,29 +1,29 @@
 @import "../../assets/styles/theme/theme_variables";
-
-@import url("https://use.typekit.net/att2ajc.css");
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
 
 :root {
-    font-family: futura-pt,
-        "helvetica",
-        times,
-        serif;
+	font-family: 'Sen', "helvetica",
+		times,
+		serif;
 }
 
 // Typography
-$headings-font-family: futura-pt,
+$headings-font-family: 'Sen',
 "helvetica",
 times,
 serif;
 $headings-font-weight: 700;
 
-$font-family-sans-serif: futura-pt,
-sans-serif;
-$font-family-base: futura-pt,
+$font-family-sans-serif: 'Sen',
+"helvetica",
+times,
+serif;
+$font-family-base: 'Sen',
 "helvetica",
 times,
 serif;
 
-$line-height-base: 1.6;
+$line-height-base: 1.3;
 
 $gray-300: $gray-500;
 $font-weight-base: 400;

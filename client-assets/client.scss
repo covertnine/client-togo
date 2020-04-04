@@ -37,7 +37,7 @@ body {
 .single-post .header-navbar,
 .error404 .header-navbar,
 .search .header-navbar {
-	background-color: $primary;
+	background-color: $light;
 }
 
 .header-navbar .justify-content-center {
@@ -221,7 +221,7 @@ body {
 
 @media only screen and (min-width: 768px) {
 
-	#page-wrapper {
+	body.home #page-wrapper {
 		margin-top: -108px;
 	}
 }
@@ -259,7 +259,6 @@ body {
 .display-6,
 .editor-styles-wrapper .c9-cta .c9-h p {
 	font-family: $headings-font-family;
-	text-transform: uppercase;
 }
 
 .single-post .c9 h1 {
