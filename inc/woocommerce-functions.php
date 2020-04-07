@@ -28,9 +28,6 @@ function gf_spinner_replace( $image_src, $form ) {
 }
 
 
-
-//remove related items
-remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
 // $path defaults to 'woocommerce/' (in client folder)
 add_filter('woocommerce_template_path', function () {
     return 'client/woocommerce/';
@@ -50,3 +47,39 @@ add_filter( 'template_include', function( $template ) {
 }, 99);
 /****************************************************************************************/
 
+/****************************************************************************************/
+/******** Adding shopping cart icon to the navigation
+/****************************************************************************************/
+
+// append shopping cart if enabled
+add_filter( 'wp_nav_menu_items', 'c9_add_woocommerce_icon', 9, 2 );
+function c9_add_woocommerce_icon( $items, $args ) {
+
+	if ( 'primary' == $args->theme_location ) {
+
+		$count = WC()->cart->get_cart_contents_count();
+
+		//if there are items in the cart, put a number in front of the icon
+		if ( $count != 0 ) {
+			$items .= '<li itemscope="itemscope" class="nav-woocommerce menu-item nav-item" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . wc_get_cart_url() . '" title="Shopping Cart" class="nav-link"><span class="view-cart">' . __('View Cart', 'c9') . '</span> <i class="fa fa-shopping-cart fa-md"></i><span class="count">' . $count . '</span></a></li>';
+		} else { //if not just put in an icon
+			$items .= '<li itemscope="itemscope" class="nav-woocommerce menu-item nav-item" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . wc_get_cart_url() . '" title="Shopping Cart" class="nav-link"><i class="fa fa-shopping-cart fa-md"></i> <span class="sr-only">' . __('View Cart', 'c9') . '</span></a></li>';
+		} //end count check
+
+	}
+	return $items;
+}
+
+	function c9_hide_wysiwyg($post) {
+
+		global $post;
+
+		if (get_post_type($post) == 'product') {
+			?>
+	<style type="text/css">
+		#postdivrich {display: none;}
+	</style>
+			<?php
+		}
+}
+add_action( 'admin_enqueue_scripts', 'c9_hide_wysiwyg' );

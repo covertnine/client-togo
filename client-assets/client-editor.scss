@@ -99,3 +99,15 @@ div[data-type="c9-blocks/column-container"] .editor-block-list__block-edit.block
 .editor-styles-wrapper .is-style-light-list li a {
 	color: $light;
 }
+
+/* woocommerce */
+.wp-block[data-type="^woocommerce/"] .wc-block-grid__products .wc-block-grid__product,
+.edit-post-visual-editor .editor-block-list__block .wc-block-grid__product-title,
+.editor-styles-wrapper .wc-block-grid__product-title,
+.wc-block-grid__product-title {
+	font-size: 16px;
+}
+
+.editor-styles-wrapper .wp-block[data-type^="woocommerce/"] .wc-block-grid__products .wc-block-grid__product a:not(.wp-block-button__link) {
+	text-decoration: none;
+}
