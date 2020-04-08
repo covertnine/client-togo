@@ -82,6 +82,15 @@ register_block_style(
         'label'        => __( 'White Text' ),
     )
 );
+
+/* add style for turning links white */
+register_block_style(
+    'c9-blocks/grid',
+    array(
+        'name'         => 'light-links',
+        'label'        => __( 'White Links' ),
+    )
+);
 /****************************************************************************************/
 
 /****************************************************************************************/
