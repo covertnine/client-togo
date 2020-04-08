@@ -68,6 +68,9 @@ function c9_add_woocommerce_icon( $items, $args ) {
 	return $items;
 }
 
+/****************************************************************************************/
+/******** Hide long description WYSIWYG field on woocommerce single
+/****************************************************************************************/
 	function c9_hide_wysiwyg($post) {
 
 		global $post;
@@ -81,3 +84,30 @@ function c9_add_woocommerce_icon( $items, $args ) {
 		}
 }
 add_action( 'admin_enqueue_scripts', 'c9_hide_wysiwyg' );
+
+/****************************************************************************************/
+/******** Changing labels to delivery instead of shipping
+/****************************************************************************************/
+//Change the Shipping Address checkout label
+function c9_shipping_field_strings( $translated_text, $text, $domain ) {
+	switch ( $translated_text ) {
+		case 'Ship to a different address?' :
+		$translated_text = __( 'Deliver to different address?', 'woocommerce' );
+		break;
+	}
+	return $translated_text;
+}
+add_filter( 'gettext', 'c9_shipping_field_strings', 20, 3 );
+
+add_filter( 'woocommerce_shipping_package_name', 'c9_shipping_package_name' );
+function c9_shipping_package_name( $name ) {
+  return 'Delivery';
+}
+
+add_filter('gettext', 'translate_reply');
+add_filter('ngettext', 'translate_reply');
+
+function translate_reply($translated) {
+	$translated = str_ireplace('Shipping', 'Delivery', $translated);
+	return $translated;
+}

@@ -361,8 +361,10 @@ p.wp-block-subhead,
 .c9 input[type="url"],
 .c9 input[type="password"],
 .c9 input[type="tel"],
-.c9 textarea {
+.c9 textarea,
+.c9 #s {
 	font-family: $font-family-base;
+	border-radius: 0px;
 }
 
 .c9 textarea {
@@ -771,7 +773,8 @@ p.wp-block-subhead,
 .site .wp-block-button__link,
 .wp-block-button:not(.is-style-outline) .wp-block-button__link.mce-content-body,
 .wp-block-file__button,
-.wp-block-file .wp-block-file__button {
+.wp-block-file .wp-block-file__button,
+#searchsubmit {
 	font-weight: 700;
 	font-family: $font-family-base;
 	letter-spacing: .09em;
@@ -780,6 +783,10 @@ p.wp-block-subhead,
 	border-radius: 0px;
 	border-radius: 34px;
 	white-space: nowrap;
+}
+
+.error404 #searchsubmit {
+	margin-left: 35px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1358,14 +1365,16 @@ p.wp-block-subhead,
 }
 
 @media only screen and (max-width: 414px) {
-	.woocommerce form .form-row .byconsolewooodt_ordertype_label {
-		display: block;
+	.woocommerce form .byconsolewooodt_delivery_type>.byconsolewooodt_ordertype_label {
+		width: 100%;
+		max-width: none;
 		float: none;
+		padding: 0px;
+		margin: 0px;
 	}
-
 }
 
-@media only screen and (min-width: 667px) {
+@media only screen and (min-width: 1px) {
 
 	.woocommerce #byconsolewooodt_checkout_field .form-row.byconsolewooodt_delivery_date,
 	.woocommerce #byconsolewooodt_checkout_field .form-row.byconsolewooodt_delivery_time {
