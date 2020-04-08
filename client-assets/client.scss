@@ -683,6 +683,16 @@ p.wp-block-subhead,
 	text-transform: uppercase;
 }
 
+.wp-block-image a img {
+	-webkit-transition: opacity .1s;
+	transition: opacity .1s;
+	opacity: 1;
+}
+
+.wp-block-image a img:hover {
+	opacity: .8;
+}
+
 /****************************************************************************************/
 /* Client default colors, button colors + background colors */
 /****************************************************************************************/
