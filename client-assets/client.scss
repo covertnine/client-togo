@@ -1014,6 +1014,10 @@ p.wp-block-subhead,
 	font-weight: 700;
 }
 
+.c9 .woocommerce .woocommerce-form-login .woocommerce-form-login__submit {
+	border-radius: 34px;
+}
+
 .c9 .woocommerce button.button,
 .woocommerce #respond input#submit.disabled,
 .woocommerce #respond input#submit:disabled,
@@ -1177,8 +1181,15 @@ p.wp-block-subhead,
 	margin: 0px 0px 30px 0px !important;
 }
 
-.woocommerce-page .c9 .entry-content ul.order_details li:before {
-	display: none;
+.woocommerce-page .c9 .entry-content ul.order_details li:before,
+.woocommerce-checkout .woocommerce .checkout ul li:before,
+.c9 .woocommerce .shop_table ul li:before {
+	display: none !important;
+}
+
+.c9 .woocommerce-checkout ul#shipping_method li {
+	margin: 0px;
+	padding: 0px;
 }
 
 .woocommerce-account #page-wrapper {
@@ -1198,8 +1209,18 @@ p.wp-block-subhead,
 .c9 .woocommerce-page form .form-row .input-text,
 .c9 .select2-container .select2-selection--single,
 .single-product.woocommerce form.cart input[type="number"] {
-	height: 50px;
+	height: 45px;
 	border: 1px solid #ccc;
+}
+
+@media only screen and (max-width: 414px) {
+	.checkout_coupon .input-text {
+		max-width: 123px;
+	}
+
+	.c9 .woocommerce .checkout_coupon .button {
+		padding: 16px 20px;
+	}
 }
 
 .byconsolewooodt_delivery_type {
@@ -1267,6 +1288,16 @@ p.wp-block-subhead,
 	max-width: 450px;
 }
 
+@media only screen and (max-width: 768px) {
+
+	.c9 .woocommerce .woocommerce-form-login,
+	.c9 .woocommerce form.login,
+	.c9 .woocommerce form.register {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
 /* woocommerce user account admin panel*/
 .c9 .woocommerce-Addresses {
 	margin-top: 30px;
@@ -1290,12 +1321,42 @@ p.wp-block-subhead,
 	align-items: center;
 }
 
-.customer_details .col-1 {
+.woocommerce-checkout .col-1 {
 	padding-left: 0;
 	padding-right: 0;
 }
 
 /* select date and time in checkout form */
+.woocommerce #byconsolewooodt_checkout_field {
+	margin-bottom: 30px;
+}
+
+.byconsolewooodt_delivery_type label[for="byconsolewooodt_delivery_type_take_away"].radio,
+.byconsolewooodt_delivery_type label[for="byconsolewooodt_delivery_type_levering"].radio {
+	background-color: $gray-500;
+	color: $light;
+}
+
+.woocommerce form .form-row .byconsolewooodt_ordertype_label {
+	margin: 5px;
+	border-radius: 34px;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: $headings-font-family;
+	padding: 12px 33px;
+	text-shadow: none;
+	box-shadow: none;
+	border: none;
+	float: none;
+	display: inline-block;
+	max-width: 48%;
+}
+
+.byconsolewooodt_delivery_type input:checked+label[for="byconsolewooodt_delivery_type_levering"] {
+	background-color: $primary;
+}
+
 @media only screen and (max-width: 414px) {
 	.woocommerce form .form-row .byconsolewooodt_ordertype_label {
 		display: block;
@@ -1407,7 +1468,6 @@ p.wp-block-subhead,
 .woocommerce-cart #payment,
 .woocommerce-checkout #payment {
 	background-color: transparent !important;
-	border-radius: 0px !important;
 }
 
 /* payment form */
@@ -1426,10 +1486,6 @@ p.wp-block-subhead,
 
 .woocommerce-checkout .woocommerce .checkout ul li {
 	padding: 20px;
-}
-
-.woocommerce-checkout .woocommerce .checkout ul li:before {
-	display: none;
 }
 
 /* product single */
