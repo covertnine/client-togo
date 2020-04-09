@@ -1332,6 +1332,11 @@ p.wp-block-subhead,
 	align-items: center;
 }
 
+.woocommerce-page .col-1,
+.woocommerce-page .col-2 {
+	max-width: none;
+}
+
 .woocommerce-checkout .col-1 {
 	padding-left: 0;
 	padding-right: 0;
@@ -1365,6 +1370,60 @@ p.wp-block-subhead,
 }
 
 .byconsolewooodt_delivery_type input:checked+label[for="byconsolewooodt_delivery_type_levering"] {
+	background-color: $primary;
+}
+
+/* woocommerce date + time picker */
+.ui-datepicker {
+	width: 275px;
+	padding: 6px;
+	max-width: 100%;
+}
+
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+	border-radius: 0px;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	padding: 4px;
+}
+
+.ui-widget-header {
+	background-image: none;
+	background: $gray-500;
+	color: $dark;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.ui-timepicker-wrapper,
+.ui-datepicker-calendar,
+.ui-datepicker .ui-datepicker-title {
+	font-family: $font-family-base;
+	font-size: 1.6em !important;
+}
+
+.ui-datepicker .ui-datepicker-title {
+	text-transform: uppercase;
+}
+
+.ui-timepicker-list li {
+	padding: 12px;
+}
+
+li.ui-timepicker-selected,
+.ui-timepicker-list li:hover,
+.ui-timepicker-list .ui-timepicker-selected:hover {
 	background-color: $primary;
 }
 
@@ -1501,7 +1560,26 @@ p.wp-block-subhead,
 	padding: 20px;
 }
 
-/* product single */
+/* order confirmation */
+ul.order_details li {
+	font-size: 14px !important;
+}
+
+.woocommerce ul.order_details li strong {
+	font-size: 16px !important;
+}
+
+.order_details:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields) li {
+	padding: 8px 20px;
+}
+
+.entry-content .order_details:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields) {
+	padding-left: 0px !important;
+}
+
+/*******************************************************************************************/
+/* woocommerce product single */
+/*******************************************************************************************/
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
 	color: $success !important;
