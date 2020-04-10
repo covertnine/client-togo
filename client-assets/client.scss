@@ -1578,6 +1578,29 @@ ul.order_details li {
 }
 
 /*******************************************************************************************/
+/* woocommerce store notice */
+/*******************************************************************************************/
+.woocommerce-store-notice,
+p.demo_store {
+	background-color: $primary;
+	font-size: 1.6em;
+	top: auto;
+	bottom: 0;
+	position: fixed;
+	height: 50px;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+}
+
+.woocommerce-store-notice__dismiss-link {
+	margin: 0px 8px;
+}
+
+/*******************************************************************************************/
 /* woocommerce product single */
 /*******************************************************************************************/
 .woocommerce div.product p.price,
