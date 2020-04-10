@@ -26,10 +26,8 @@ add_action('wp_enqueue_scripts', 'client_scripts', 99);
 
 /* add client compiled files to gutenberg editor */
 if (!function_exists('c9_client_editor_style')) {
-    function c9_client_editor_style()
-    {
+    function c9_client_editor_style() {
 
-        wp_enqueue_style('c9-client-typekit-style', '//use.typekit.net/uqa4rne.css');
         wp_enqueue_style('c9-client-styles', get_template_directory_uri() . '/client/client-assets/dist/client.css');
         wp_enqueue_style('c9-client-editor-styles', get_template_directory_uri() . '/client/client-assets/dist/client-editor.min.css', 99999);
     }
@@ -54,7 +52,7 @@ if (!function_exists('c9_client_setup')) {
 }
 
 /****************************************************************************************/
-/* C9 Music Admin Settings */
+/* C9 Togo Admin Settings */
 /****************************************************************************************/
 if ( ! function_exists( 'c9_hide_font_setting' ) ) {
 	/**

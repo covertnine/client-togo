@@ -1,5 +1,5 @@
 <?php
-/* Band Client */
+/* Togo Client */
 
 require get_template_directory() . '/client/inc/client-functions.php';
 
