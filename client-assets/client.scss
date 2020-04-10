@@ -534,6 +534,11 @@ p.wp-block-subhead,
 	color: $light;
 }
 
+/* search results */
+.updated {
+	display: none;
+}
+
 .entry-big-header .entry-title-box .entry-meta .posted-on a,
 .entry-big-header .entry-title-box .entry-meta .author a {
 	text-decoration: underline;
@@ -834,11 +839,6 @@ p.wp-block-subhead,
 .entry-content .c9-share-list a:hover {
 	opacity: 0.8;
 	color: $light;
-}
-
-/* search results */
-.updated {
-	display: none;
 }
 
 /****************************************************************************************/
@@ -1807,4 +1807,13 @@ p.demo_store {
 .widget_text ul li,
 .widget_recent_entries ul li {
 	margin: 14px 0px;
+}
+
+.site-footer .footer-search .btn {
+	margin-left: 8px;
+}
+
+.footer-search-wrapper .footer-search .input-group>.input-group-append>.btn:hover {
+	color: $light;
+	background-color: $primary;
 }
