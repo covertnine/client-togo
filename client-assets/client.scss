@@ -939,6 +939,16 @@ p.wp-block-subhead,
 	position: absolute;
 }
 
+@media only screen and (max-width: 667px) {
+
+	.c9 .wc-block-grid__product-add-to-cart a.loading:after,
+	.c9 .wc-block-grid__product-add-to-cart button.loading:after,
+	.c9 .wc-block-grid__product-add-to-cart a.added:after,
+	.c9 .wc-block-grid__product-add-to-cart button.added:after {
+		right: 3px;
+	}
+}
+
 .c9 .wc-block-grid__product-add-to-cart .added_to_cart {
 	text-decoration: none;
 	font-size: 12px;
