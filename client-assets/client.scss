@@ -1,5 +1,5 @@
 /****************************************************************************************/
-/* Band Client */
+/* Togo Client */
 /****************************************************************************************/
 @import "_client_variables";
 
@@ -841,6 +841,21 @@ p.wp-block-subhead,
 	color: $light;
 }
 
+.sidebar .widget_search input[type="submit"],
+.sidebar .widget_search #s {
+	display: block;
+	width: 100%;
+}
+
+.sidebar .widget_search .input-group-append {
+	width: 100%;
+}
+
+.sidebar .widget_search #s {
+	margin-bottom: 8px;
+	padding: 5px 6px;
+}
+
 /****************************************************************************************/
 /* WooCommerce Specifics */
 /****************************************************************************************/
@@ -995,6 +1010,15 @@ p.wp-block-subhead,
 	font-size: 12px;
 	font-family: $font-family-base;
 	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.woocommerce #respond input#submit.added::after,
+.woocommerce a.button.added::after,
+.woocommerce button.button.added::after,
+.woocommerce input.button.added::after {
+	position: absolute;
+	right: 2px;
 }
 
 .woocommerce-page.woocommerce #respond input#submit:hover,
@@ -1337,7 +1361,8 @@ p.wp-block-subhead,
 	max-width: none;
 }
 
-.woocommerce-checkout .col-1 {
+.woocommerce-checkout .col-1,
+.woocommerce-checkout .col-2 {
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -1559,6 +1584,15 @@ li.ui-timepicker-selected,
 .woocommerce-checkout .woocommerce .checkout ul li {
 	padding: 20px;
 }
+
+/* payment form  layout adjustments */
+#add_payment_method #payment div.payment_box,
+.woocommerce-cart #payment div.payment_box,
+.woocommerce-checkout #payment div.payment_box,
+.c9 .woocommerce-checkout #payment ul.payment_methods li {
+	padding: 0px;
+}
+
 
 /* order confirmation */
 ul.order_details li {
