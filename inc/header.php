@@ -7,8 +7,7 @@
 					<div class="container">
 						<?php
 
-							// get custom logo, if not set, use customizer logo, if that's not set, show text of site title
-							$c9_logo      = get_option( 'cortex_branding', '' );
+							// Use customizer logo, if that's not set, show text of site title
 							$c9_site_name = get_bloginfo( 'name' );
 
 							if (has_custom_logo()) {
@@ -16,12 +15,15 @@
 							} else {
 							?>
 							<a href="<?php echo get_home_url(); ?>" title="<?php echo $c9_site_name . __( ' Homepage', 'c9' ); ?>" class="navbar-brand c9-custom-logo">
-								<img src="<?php echo get_template_directory_uri() . '/assets/images/c9-black-text-logo.svg'; ?>" class="c9-home-logo img-fluid" alt="<?php echo $c9_site_name . __( ' Logo', 'c9' );
-								?>" />
+
+								<?php
+								echo "<h1>".$c9_site_name."</h1>";
+								?>
+
 							</a>
 							<?php
 							}
-							?>
+						?>
 
 						<div class="navbar-small-buttons">
 							<div class="nav-search">
@@ -30,7 +32,7 @@
 									<span class="sr-only"><?php __( 'Search', 'c9' ); ?></span>
 								</a>
 							</div>
-							<div class="nav-order d-inline-block d-md-none">
+							<div class="nav-order d-inline-block d-lg-none">
 								<?php
 								$count = WC()->cart->get_cart_contents_count();
 

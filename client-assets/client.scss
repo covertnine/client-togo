@@ -162,13 +162,12 @@ a:hover {
 
 .header-navbar .nav-order {
 	display: inline-block;
-	font-size: 16px;
+	font-size: 2em;
 }
 
 .header-navbar .nav-order .nav-link {
 	text-decoration: none;
 	color: $dark;
-	font-size: 16px;
 }
 
 @-webkit-keyframes fadeInFromNone {
