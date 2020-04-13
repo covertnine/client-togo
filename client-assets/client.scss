@@ -706,7 +706,10 @@ p.wp-block-subhead,
 }
 
 /* c9 grid block style for white links */
-.entry-content .is-style-light-links p a:not(.wp-block-button__link):not(.nav-tabs):not([class|=c9-share]):not(.c9-smooth) {
+.entry-content .is-style-light-links p a:not(.wp-block-button__link):not(.nav-tabs):not([class|=c9-share]):not(.c9-smooth),
+.entry-content .is-style-light-links p a,
+.entry-content .c9-grid .is-style-light-links a,
+.editor-styles-wrapper .c9-grid.is-style-light-links a {
 	color: $light;
 }
 
