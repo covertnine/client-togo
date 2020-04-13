@@ -1,10 +1,7 @@
 @import "_client_variables";
 
 body .editor-styles-wrapper {
-	font-family: futura-pt,
-		"helvetica",
-		times,
-		serif;
+	font-family: $font-family-base;
 }
 
 .h1,
@@ -113,11 +110,25 @@ div[data-type="c9-blocks/column-container"] .editor-block-list__block-edit.block
 }
 
 /* image block captions */
-.editor-styles-wrapper .wp-block-image .aligncenter>figcaption,
-.editor-styles-wrapper .wp-block-image .alignleft>figcaption,
-.editor-styles-wrapper .wp-block-image .alignright>figcaption,
-.editor-styles-wrapper .wp-block-image.is-resized>figcaption {
-	font-size: 14px;
-	font-weight: 700;
-	text-transform: uppercase;
+@media only screen and (min-width: 1px) {
+
+	.editor-styles-wrapper .wp-block-image figcaption,
+	.editor-styles-wrapper .wp-block-image .aligncenter>figcaption,
+	.editor-styles-wrapper .wp-block-image .alignleft>figcaption,
+	.editor-styles-wrapper .wp-block-image .alignright>figcaption,
+	.editor-styles-wrapper .wp-block-image.is-resized>figcaption {
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+}
+
+/* universal line height for paragraphs */
+.editor-styles-wrapper p,
+.wp-block[data-type="core/paragraph"] p,
+.c9 dl,
+.entry-content p,
+.entry-footer {
+	line-height: $line-height-base;
 }
