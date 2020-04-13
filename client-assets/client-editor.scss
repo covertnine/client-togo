@@ -111,3 +111,13 @@ div[data-type="c9-blocks/column-container"] .editor-block-list__block-edit.block
 .editor-styles-wrapper .wp-block[data-type^="woocommerce/"] .wc-block-grid__products .wc-block-grid__product a:not(.wp-block-button__link) {
 	text-decoration: none;
 }
+
+/* image block captions */
+.editor-styles-wrapper .wp-block-image .aligncenter>figcaption,
+.editor-styles-wrapper .wp-block-image .alignleft>figcaption,
+.editor-styles-wrapper .wp-block-image .alignright>figcaption,
+.editor-styles-wrapper .wp-block-image.is-resized>figcaption {
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+}

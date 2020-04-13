@@ -7,6 +7,12 @@ body {
 	font-family: $font-family-base;
 }
 
+.c9 dl,
+.entry-content p,
+.entry-footer {
+	line-height: $line-height-base;
+}
+
 a:hover {
 	color: $primary;
 }
