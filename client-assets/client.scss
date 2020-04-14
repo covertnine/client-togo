@@ -1583,6 +1583,12 @@ li.ui-timepicker-selected,
 	margin-bottom: 30px;
 }
 
+.woocommerce-checkout form .woocommerce-terms-and-conditions-wrapper .form-row label.checkbox,
+.woocommerce-checkout form #leave_at_door_checkbox_field label.checkbox {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
 .woocommerce-checkout.woocommerce #payment #place_order,
 .woocommerce-checkout.woocommerce-page #payment #place_order {
 	float: left;
