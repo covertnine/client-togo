@@ -603,7 +603,7 @@ p.wp-block-subhead,
 
 .editor-styles-wrapper .wp-block[data-type="core/list"] ul li:before,
 .editor-styles-wrapper .wp-block-latest-posts li:before,
-.entry-content ul:not(.blocks-gallery-grid) li:before {
+.entry-content ul:not(.blocks-gallery-grid):not(.gform_fields) li:before {
 	font-size: 14px;
 	content: "\f18e";
 	font-family: fontawesome;
@@ -639,7 +639,7 @@ p.wp-block-subhead,
 	color: $dark;
 }
 
-.entry-content ul:not(.blocks-gallery-grid) li:before,
+.entry-content ul:not(.blocks-gallery-grid):not(.gform_fields) li:before,
 .editor-styles-wrapper ul:not(.wp-block-gallery) li:before,
 .widget_archive ul li:before,
 .widget_categories ul li:before,
@@ -1812,6 +1812,13 @@ p.demo_store {
 		float: none;
 		margin-right: 0%;
 	}
+}
+
+/****************************************************************************************/
+/* Gravity Forms */
+/****************************************************************************************/
+.gform_confirmation_wrapper {
+	font-size: 1.6em;
 }
 
 /****************************************************************************************/
