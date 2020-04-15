@@ -695,13 +695,16 @@ p.wp-block-subhead,
 }
 
 /* image block captions */
-.wp-block-image .aligncenter>figcaption,
-.wp-block-image .alignleft>figcaption,
-.wp-block-image .alignright>figcaption,
-.wp-block-image.is-resized>figcaption {
-	font-size: 14px;
-	font-weight: 700;
-	text-transform: uppercase;
+@media only screen and (min-width: 1px) {
+
+	.wp-block-image figcaption,
+	.wp-block-image .aligncenter>figcaption,
+	.wp-block-image .alignleft>figcaption,
+	.wp-block-image .alignright>figcaption,
+	.wp-block-image.is-resized>figcaption {
+		font-size: 14px;
+		font-weight: 700;
+	}
 }
 
 .wp-block-image a img {
