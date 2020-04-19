@@ -111,3 +111,6 @@ function translate_reply($translated) {
 	$translated = str_ireplace('Shipping', 'Delivery', $translated);
 	return $translated;
 }
+
+/* hiding nag message from wooODT Lite */
+remove_filter( 'admin_notices', 'byconsolewooodt_free_plugin_activation_admin_notice_error');
