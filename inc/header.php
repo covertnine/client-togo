@@ -34,8 +34,8 @@
 							</div>
 							<div class="nav-order d-inline-block d-lg-none">
 								<?php
-
-								if (is_plugin_active('woocommerce')) { //show cart contents if woo is active
+ 								include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+								if ( is_plugin_active('woocommerce') ) { //show cart contents if woo is active
 									$count = WC()->cart->get_cart_contents_count();
 
 									//if there are items in the cart, put a number in front of the icon
