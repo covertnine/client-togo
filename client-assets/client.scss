@@ -810,6 +810,10 @@ p.wp-block-subhead,
 	white-space: nowrap;
 }
 
+.footer-search #searchsubmit {
+	font-size: 10px;
+}
+
 .error404 #searchsubmit {
 	margin-left: 35px;
 }
@@ -913,7 +917,8 @@ p.wp-block-subhead,
 #add_payment_method table.cart td.actions .coupon .input-text,
 .woocommerce-cart table.cart td.actions .coupon .input-text,
 .woocommerce-checkout table.cart td.actions .coupon .input-text,
-.single_variation_wrap {
+.single_variation_wrap,
+.wc-block-product-categories select {
 	font-size: 16px;
 }
 
@@ -976,7 +981,10 @@ p.wp-block-subhead,
 	font-weight: bold;
 }
 
-/* more button settings adjustments specific to WC */
+/***************************************************************************************/
+/* woocommerce buttons */
+/***************************************************************************************/
+
 .c9 .entry-content .wp-block-button__link:active,
 .c9 .entry-content .wp-block-button__link:focus {
 	color: #fff;
@@ -1059,7 +1067,6 @@ p.wp-block-subhead,
 	color: $light;
 }
 
-/* woocommerce buttons */
 #add_payment_method .wc-proceed-to-checkout a.checkout-button,
 .c9 .woocommerce a.button.alt.checkout-button,
 .c9 .woocommerce button.button.alt.checkout-button,
@@ -1121,7 +1128,7 @@ p.wp-block-subhead,
 	background-color: $gray-900;
 }
 
-/* my account order buttons */
+/* WooCommerce my account order buttons */
 .woocommerce table.my_account_orders .button {
 	min-width: 115px;
 	text-align: center;
@@ -1139,6 +1146,14 @@ p.wp-block-subhead,
 
 .woocommerce table.my_account_orders .button.wcsts-get-help-button {
 	background-color: $primary;
+}
+
+/* WooCommerce select buttons */
+.c9 .wc-block-product-categories__button {
+	padding: 6px;
+	height: 45px;
+	border-radius: 0px;
+	margin-left: -10px;
 }
 
 /* set column widths for containers of woocommerce pages */
@@ -1238,6 +1253,7 @@ p.wp-block-subhead,
 }
 
 /***************************************************************************************/
+
 /* WooCommerce checkout forms and form inputs */
 /***************************************************************************************/
 
@@ -1269,11 +1285,12 @@ p.wp-block-subhead,
 	border-radius: 0px;
 }
 
-/* WooCommerce Forms  text inputs */
+/* WooCommerce Forms text inputs */
 .c9 .woocommerce form .form-row .input-text,
 .c9 .woocommerce-page form .form-row .input-text,
 .c9 .select2-container .select2-selection--single,
-.single-product.woocommerce form.cart input[type="number"] {
+.single-product.woocommerce form.cart input[type="number"],
+.wc-block-product-categories select {
 	height: 45px;
 	border: 1px solid #ccc;
 }
@@ -1312,12 +1329,13 @@ p.wp-block-subhead,
 	position: absolute;
 }
 
-.c9 .woocommerce div.product form.cart .variations select {
+.c9 .woocommerce div.product form.cart .variations select,
+.wc-block-product-categories select {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	border-radius: 0;
 	padding-left: 12px;
-	height: 50px;
+	height: 45px;
 	position: relative;
 	z-index: 20;
 	border: 1px solid #ccc;
@@ -1819,6 +1837,14 @@ p.demo_store {
 /****************************************************************************************/
 .gform_confirmation_wrapper {
 	font-size: 1.6em;
+}
+
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield input[type=radio] {
+	margin-left: 2px;
+}
+
+.gform_wrapper .gfield_radio li label {
+	margin: 5px 0 0 4px;
 }
 
 /****************************************************************************************/

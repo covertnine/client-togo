@@ -34,14 +34,17 @@
 							</div>
 							<div class="nav-order d-inline-block d-lg-none">
 								<?php
-								$count = WC()->cart->get_cart_contents_count();
 
-								//if there are items in the cart, put a number in front of the icon
-								if ( $count != 0 ) {
-									echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . wc_get_cart_url() . '" title="Shopping Cart" class="nav-link"><span class="sr-only">' . __('View Cart', 'c9') . '</span> <i class="fa fa-shopping-cart fa-md"></i><span class="count">' . $count . '</span></a></div>';
-								} else { //if not just put in an icon
-									echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . wc_get_cart_url() . '" title="Shopping Cart" class="nav-link"><i class="fa fa-shopping-cart fa-md"></i> <span class="sr-only">' . __('View Cart', 'c9') . '</span></a></div>';
-								} //end count check
+								if (is_plugin_active('woocommerce')) { //show cart contents if woo is active
+									$count = WC()->cart->get_cart_contents_count();
+
+									//if there are items in the cart, put a number in front of the icon
+									if ( $count != 0 ) {
+										echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . wc_get_cart_url() . '" title="Shopping Cart" class="nav-link"><span class="sr-only">' . __('View Cart', 'c9') . '</span> <i class="fa fa-shopping-cart fa-md"></i><span class="count">' . $count . '</span></a></div>';
+									} else { //if not just put in an icon
+										echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . wc_get_cart_url() . '" title="Shopping Cart" class="nav-link"><i class="fa fa-shopping-cart fa-md"></i> <span class="sr-only">' . __('View Cart', 'c9') . '</span></a></div>';
+									} //end count check
+								} //end if woocommerce is active
 								?>
 							</div>
 							<?php if (has_nav_menu('primary')) { ?>
