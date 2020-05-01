@@ -21,7 +21,7 @@ add_filter('woocommerce_template_path', function () {
     return 'client/woocommerce/';
 });
 
-/* fixes gravity forms ugly ass spinner */
+/* fixes gravity forms ugly spinner */
 add_filter( 'gform_ajax_spinner_url', 'gf_spinner_replace', 10, 2 );
 function gf_spinner_replace( $image_src, $form ) {
 	return  'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; // relative to you theme images folder
@@ -55,7 +55,7 @@ add_filter( 'template_include', function( $template ) {
 add_filter( 'wp_nav_menu_items', 'c9_add_woocommerce_icon', 9, 2 );
 function c9_add_woocommerce_icon( $items, $args ) {
 
-	include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); 
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 	if ( is_plugin_active('woocommerce') ) { //show cart contents if woo is active
 
@@ -119,3 +119,6 @@ function translate_reply($translated) {
 
 /* hiding nag message from wooODT Lite */
 remove_filter( 'admin_notices', 'byconsolewooodt_free_plugin_activation_admin_notice_error');
+
+/* hiding nag message from NMI integration for payments */
+remove_filter( 'admin_notices', 'patsatech_license_woo_nmi_direct_notice');
