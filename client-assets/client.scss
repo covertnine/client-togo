@@ -55,7 +55,6 @@ a:hover {
 }
 
 .header-navbar .justify-content-center {
-	-webkit-box-pack: end flex-end !important;
 	justify-content: flex-end !important;
 }
 
@@ -67,11 +66,6 @@ a:hover {
 .header-navbar .nav .search .nav-link .fa-search,
 .header-navbar .nav .nav-link .fa-shopping-cart {
 	font-size: 14px;
-}
-
-.header-navbar .nav .nav-item.search,
-.nav-search {
-	display: none;
 }
 
 .header-navbar .navbar .nav .dropdown-toggle::after {
@@ -109,11 +103,8 @@ a:hover {
 	bottom: 0;
 	background: $dark;
 	height: 4px;
-	-webkit-transition-property: right;
 	transition-property: right;
-	-webkit-transition-duration: 0.3s;
 	transition-duration: 0.3s;
-	-webkit-transition-timing-function: ease-out;
 	transition-timing-function: ease-out;
 }
 
@@ -212,13 +203,11 @@ a:hover {
 
 @-webkit-keyframes slideInUp {
 	from {
-		-webkit-transform: translate3d(0, 5px, 0);
 		transform: translate3d(0, 5px, 0);
 		opacity: 0;
 	}
 
 	to {
-		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
 		opacity: 1;
 	}
@@ -226,13 +215,11 @@ a:hover {
 
 @keyframes slideInUp {
 	from {
-		-webkit-transform: translate3d(0, 5px, 0);
 		transform: translate3d(0, 5px, 0);
 		opacity: 0;
 	}
 
 	to {
-		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
 		opacity: 1;
 	}
@@ -526,9 +513,7 @@ p.wp-block-subhead,
 
 .c9-block-post-grid .c9-block-post-grid-text {
 	display: grid;
-	-webkit-box-align: center;
 	align-items: center;
-	-webkit-box-pack: center;
 	justify-content: center;
 }
 
@@ -708,7 +693,6 @@ p.wp-block-subhead,
 }
 
 .wp-block-image a img {
-	-webkit-transition: opacity .1s;
 	transition: opacity .1s;
 	opacity: 1;
 }
@@ -1079,7 +1063,6 @@ p.wp-block-subhead,
 .woocommerce-checkout.woocommerce-page #payment #place_order {
 	background-color: $success;
 	padding: 16px 33px;
-	-webkit-transition: background-color .4s ease-out;
 	transition: background-color .4s ease-out;
 	font-size: 12px;
 	text-transform: uppercase;
@@ -1183,7 +1166,6 @@ p.wp-block-subhead,
 	.wc-block-grid.has-4-columns .wc-block-grid__products,
 	.wc-block-grid.has-5-columns .wc-block-grid__products,
 	.wc-block-grid.has-6-columns .wc-block-grid__products {
-		display: -webkit-box;
 		display: flex;
 	}
 
@@ -1196,14 +1178,12 @@ p.wp-block-subhead,
 	.wc-block-grid.has-2-columns .wc-block-grid__product,
 	.wc-block-grid.has-4-columns .wc-block-grid__product,
 	.wc-block-grid.has-6-columns .wc-block-grid__product {
-		-webkit-box-flex: 1;
 		flex: 1 0 50%;
 		max-width: 50%;
 	}
 
 	.wc-block-grid.has-5-columns .wc-block-grid__product,
 	.wc-block-grid.has-3-columns .wc-block-grid__product {
-		-webkit-box-flex: 1;
 		flex: 1 0 100%;
 		max-width: 100%;
 	}
@@ -1398,9 +1378,7 @@ p.wp-block-subhead,
 .c9 .woocommerce table.cart td.actions .coupon,
 .c9 .woocommerce-page #content table.cart td.actions .coupon,
 .c9 .woocommerce-page table.cart td.actions .coupon {
-	display: -webkit-box;
 	display: flex;
-	-webkit-box-align: center;
 	align-items: center;
 }
 
@@ -1475,7 +1453,6 @@ p.wp-block-subhead,
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
 	top: 50%;
-	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 
@@ -1676,11 +1653,8 @@ p.demo_store {
 	bottom: 0;
 	position: fixed;
 	height: 50px;
-	display: -webkit-box;
 	display: flex;
-	-webkit-box-align: center;
 	align-items: center;
-	-webkit-box-pack: center;
 	justify-content: center;
 }
 
