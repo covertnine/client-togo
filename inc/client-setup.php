@@ -12,7 +12,7 @@ register_block_style(
 	'core/list',
 	array(
 		'name'         => 'light-list',
-		'label'        => __('White Text'),
+		'label'        => __('White Text', 'c9-togo'),
 	)
 );
 
@@ -21,7 +21,7 @@ register_block_style(
 	'c9-blocks/grid',
 	array(
 		'name'         => 'light-links',
-		'label'        => __('White Links'),
+		'label'        => __('White Links', 'c9-togo'),
 	)
 );
 
