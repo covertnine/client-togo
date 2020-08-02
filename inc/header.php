@@ -1,4 +1,13 @@
-			<div id="wrapper-navbar" class="header-navbar" itemscope itemtype="http://schema.org/WebSite">
+<?php
+/**
+ * The header for our client theme.
+ *
+ * Displays all of the <head> section and everything up till <div id="content"> and overrides the default header.php if its available.
+ *
+ * @package C9
+ */
+?>
+ 			<div id="wrapper-navbar" class="header-navbar" itemscope itemtype="http://schema.org/WebSite">
 
 				<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'c9' ); ?></a>
 
