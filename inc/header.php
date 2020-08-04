@@ -21,16 +21,6 @@
 
 							if (has_custom_logo()) {
 								the_custom_logo();
-							} else {
-							?>
-							<a href="<?php echo get_home_url(); ?>" title="<?php echo $c9_site_name . __( ' Homepage', 'c9-togo' ); ?>" class="navbar-brand c9-custom-logo">
-
-								<?php
-								echo "<h1>".$c9_site_name."</h1>";
-								?>
-
-							</a>
-							<?php
 							}
 						?>
 
