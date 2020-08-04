@@ -97,7 +97,7 @@ add_action( 'admin_enqueue_scripts', 'c9_hide_wysiwyg' );
 function c9_shipping_field_strings( $translated_text, $text, $domain ) {
 	switch ( $translated_text ) {
 		case 'Ship to a different address?' :
-		$translated_text = __( 'Deliver to different address?', 'woocommerce' );
+		$translated_text = __( 'Deliver to different address?', 'c9-togo' );
 		break;
 	}
 	return $translated_text;
