@@ -24,12 +24,12 @@ if (!function_exists('client_scripts')) {
 
 		wp_enqueue_style('client-styles', get_template_directory_uri() . '/client/client-assets/dist/client.min.css', array('c9-styles'));
 
-		wp_enqueue_script('gsap', get_template_directory_uri() . '/client/client-assets/vendor/jquery.gsap.min.js', array('jquery'), '', true);
-		wp_enqueue_script('scrollto', get_template_directory_uri() . '/client/client-assets/vendor/plugins/ScrollToPlugin.min.js', array('jquery'), '', true);
-		wp_enqueue_script('scrollmagic', get_template_directory_uri() . '/client/client-assets/vendor/ScrollMagic/2.0.7/ScrollMagic.min.js', '', '', true);
-		wp_enqueue_script('history-js', get_template_directory_uri() . '/client/client-assets/vendor/history.js', array('jquery'), true);
-		wp_enqueue_script('client-scripts', get_template_directory_uri() . '/client/client-assets/custom-client.js', array('jquery'), '', true);
-		wp_enqueue_script('client-scripts', get_template_directory_uri() . '/client/client-assets/transitions.js', array('jquery'), '', true);
+		wp_enqueue_script('gsap', get_template_directory_uri() . '/client/client-assets/vendor/jquery.gsap.min.js', array('jquery', 'c9-scripts'), '', true);
+		wp_enqueue_script('scrollto', get_template_directory_uri() . '/client/client-assets/vendor/plugins/ScrollToPlugin.min.js', array('jquery', 'c9-scripts'), '', true);
+		wp_enqueue_script('scrollmagic', get_template_directory_uri() . '/client/client-assets/vendor/ScrollMagic/2.0.7/ScrollMagic.min.js', array('jquery', 'c9-scripts'), '', true);
+		wp_enqueue_script('history-js', get_template_directory_uri() . '/client/client-assets/vendor/history.js', array('jquery', 'c9-scripts'), true);
+		wp_enqueue_script('client-scripts', get_template_directory_uri() . '/client/client-assets/custom-client.js', array('jquery', 'c9-scripts'), '', true);
+		wp_enqueue_script('client-scripts', get_template_directory_uri() . '/client/client-assets/transitions.js', array('jquery'), 'c9-scripts', true);
 	}
 } // endif function_exists( 'client_scripts' ).
 add_action('wp_enqueue_scripts', 'client_scripts', 99);
@@ -62,16 +62,3 @@ include("client-setup.php");
 /****************************************************************************************/
 include("woocommerce-functions.php");
 
-/****************************************************************************************/
-/* clean up header with excess WP stuff */
-/****************************************************************************************/
-/*Removes RSD, XMLRPC, WLW, WP Generator, ShortLink and Comment Feed links
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wlwmanifest_link');
-remove_action('wp_head', 'wp_generator');
-remove_action('wp_head', 'wp_shortlink_wp_head');
-remove_action('wp_head', 'feed_links', 2);
-remove_action('wp_head', 'feed_links_extra', 3);*/
-
-/*Removes prev and next article links
-remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');*/
