@@ -63,7 +63,7 @@
 						wp_nav_menu(
 								array(
 									'theme_location'  => 'primary',
-									'container_class' => 'collapse navbar-collapse justify-content-center navbar-expand-lg',
+									'container_class' => 'collapse navbar-collapse justify-content-center navbar-expand-lg pb-2 pt-2',
 									'container_id'    => 'navbarNavDropdown',
 									'menu_class'      => 'navbar-nav nav nav-fill justify-content-between',
 									'fallback_cb'     => '',

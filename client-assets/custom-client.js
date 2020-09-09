@@ -5,19 +5,21 @@ jQuery(document).ready(function () {
 		if (jQuery("body.home").length) {
 			$(".c9").on(
 				"click",
-				".nav-link[href^='/#'], .scroll-me a[href^='/#'], .dropdown-item[href^='/#'], a.scroll-me[href^='/#'], .scrollme[href^='/#'], .scrollme[href^='#']",
+				".nav-link[href^='/#'], .dropdown-item[href^='/#'], a[href^='/#'], a[href^='#']:not(.btn-nav-search)",
 				function (event) {
 					event.preventDefault();
 
 					//what link was clicked
 					var sectionLink = $(event.target).attr("href");
-					var anchorID = sectionLink.substr(1);
+					if (sectionLink.substr(0, 1) === '/') {
+						sectionLink = sectionLink.substr(1);
+					}
 
 					// scroll to that part of the page
 					gsap.to(window, {
 						duration: 1.5,
 						scrollTo: {
-							y: anchorID,
+							y: sectionLink,
 							offsetY: 55
 						},
 						ease: "power1.out"
@@ -37,7 +39,7 @@ if (jQuery("body.home").length) {
 	var navLinks = [];
 
 	jQuery(
-		".nav-link[href^='/#'], .scroll-me a[href^='/#'], .dropdown-item[href^='/#']"
+		".nav-link[href^='/#'], .dropdown-item[href^='/#'], .nav-link[href^='#']:not(.btn-nav-search), .dropdown-item[href^='#']"
 	).each(function () {
 		// get all link IDs and put them in array from header and direct clicked scroll links
 		navLinks.push(jQuery(this).attr("href"));
@@ -52,25 +54,29 @@ if (jQuery("body.home").length) {
 
 	for (var i = 0; i < setSceneNum; i++) {
 
-		var anchorID = navLinks[i].substr(1);
-		var navItemActive = 'a[href="/' + anchorID + '"]';
+		// test for slashes at beginning of link string
+		if (navLinks[i].substr(0, 1) === '/') {
+			var anchorID = navLinks[i].substr(1);
+			var navItemActive = '[href="/' + anchorID + '"] span';
+		} else {
+			var anchorID = navLinks[i];
+			var navItemActive = '[href="' + anchorID + '"] span';
+		}
 
-		console.log("anchorID: " + anchorID + " navItemActive: " + navItemActive);
+		// console.log("anchorID: " + anchorID + " navItemActive: " + navItemActive);
 
-		var tl = gsap.timeline({
+		let tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: anchorID,
-				scrub: 1,
-				start: "top bottom",
-				end: "+=100%"
+				toggleActions: "play reset reset reset",
+				start: "top 65px",
+				end: "bottom 65px"
 			}
 		});
 
 		tl.to(navItemActive, {
-			// x: 100
+			right: "0%"
 		});
-
-		//.setClassToggle(".c9-" + classLabel, "nav-highlight") // add class toggle
 
 	}
 }

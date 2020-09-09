@@ -81,9 +81,8 @@ a:hover {
 .header-navbar .navbar .nav .nav-item .dropdown-item,
 .header-navbar .navbar .nav .nav-item .nav-link,
 .header-navbar .navbar .nav .search,
-.header-navbar .navbar .nav a::after {
+.header-navbar .navbar .nav a span {
 	line-height: 1;
-	// text-shadow: 0.5px 0.866px 4px rgba(0, 0, 0, 0.92);
 }
 
 .header-navbar .navbar .nav .nav-item {
@@ -94,7 +93,7 @@ a:hover {
 	margin: 0px 6px;
 }
 
-.header-navbar .navbar .nav>.nav-item>.nav-link:before {
+.header-navbar .navbar .nav>.nav-item>.nav-link span {
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -103,15 +102,11 @@ a:hover {
 	bottom: 0;
 	background: $dark;
 	height: 4px;
-	transition-property: right;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
 }
 
-// .header-navbar .navbar .nav>.nav-item.active>.nav-link:before,
-.header-navbar .navbar .nav>.nav-item:hover>.nav-link:before,
-.header-navbar .navbar .nav>.nav-item.nav-highlight>.nav-link:before {
-	right: 0;
+.header-navbar .navbar .nav>.nav-item:focus>.nav-link span,
+.header-navbar .navbar .nav>.nav-item.nav-highlight>.nav-link span {
+	right: 0%;
 }
 
 .header-navbar .navbar .nav .search .nav-search a {
@@ -125,7 +120,7 @@ a:hover {
 	font-family: $font-family-sans-serif;
 	text-transform: none;
 	position: relative;
-	letter-spacing: .02em;
+	letter-spacing: .8px;
 	padding: 14px 0px;
 }
 
@@ -150,11 +145,6 @@ a:hover {
 	display: block;
 	-webkit-animation: fadeInFromNone 0.5s ease-out;
 	animation: fadeInFromNone 0.5s ease-out;
-}
-
-.header-navbar .nav .nav-item .dropdown-menu .dropdown-item:hover {
-	background-color: $dark;
-	color: $light;
 }
 
 .header-navbar .nav-order {
@@ -225,13 +215,19 @@ a:hover {
 	}
 }
 
-.nav-woocommerce:hover a:before {
+.nav-woocommerce:hover a:before,
+.nav-woocommerce:hover a span {
 	display: none;
 }
 
 /****************************************************************************************/
 /* nav link hover*/
 /****************************************************************************************/
+.header-navbar .nav .nav-item .dropdown-menu .dropdown-item:hover {
+	background-color: $dark;
+	color: $light;
+}
+
 @media only screen and (max-width: 768px) {
 
 	.navbar-small .header-navbar .navbar .nav .c9-order-now,
@@ -250,9 +246,9 @@ a:hover {
 	border-radius: 34px;
 }
 
-.header-navbar .navbar .nav>.nav-item.active.c9-order-now>.nav-link:before,
-.header-navbar .navbar .nav>.nav-item.nav-highlight.c9-order-now>.nav-link:before,
-.header-navbar .navbar .nav>.nav-item.c9-order-now:hover>.nav-link:before {
+.header-navbar .navbar .nav>.nav-item.active.c9-order-now>.nav-link span,
+.header-navbar .navbar .nav>.nav-item.nav-highlight.c9-order-now>.nav-link span,
+.header-navbar .navbar .nav>.nav-item.c9-order-now:hover>.nav-link span {
 	display: none;
 }
 
@@ -262,15 +258,6 @@ a:hover {
 	color: $dark !important;
 }
 
-.header-navbar .navbar .nav .nav-item .dropdown-item:hover,
-.header-navbar .navbar .nav .nav-item .nav-link:hover {
-	color: $primary;
-}
-
-.header-navbar .navbar:not(.navbar-small) .nav .nav-item .nav-link:hover {
-	color: $primary;
-}
-
 .header-navbar .navbar .nav .nav-item>.nav-link:focus,
 .header-navbar .navbar .nav .nav-item>.nav-link:active {
 	color: $dark;
@@ -278,6 +265,16 @@ a:hover {
 
 .header-navbar .navbar.navbar-small .nav .nav-item.active:not(.c9-order-now)>.nav-link {
 	color: $dark;
+}
+
+.header-navbar .navbar:not(.navbar-small) .nav .nav-item .nav-link:hover,
+.header-navbar .navbar .nav .nav-item .dropdown-item:hover,
+.header-navbar .navbar .nav .nav-item .nav-link:hover {
+	color: $primary;
+}
+
+.header-navbar .navbar.navbar-small .nav .nav-item.active>.nav-link:hover {
+	color: $primary;
 }
 
 /****************************************************************************************/
@@ -295,17 +292,6 @@ a:hover {
 	.header-navbar .navbar-collapse.show {
 		background-color: $light;
 		left: 0;
-	}
-}
-
-/****************************************************************************************/
-/* transparent page header navigation on desktop */
-/****************************************************************************************/
-
-@media only screen and (min-width: 768px) {
-
-	#page-wrapper {
-		// margin-top: -108px;
 	}
 }
 
@@ -342,7 +328,7 @@ a:hover {
 .display-6,
 .editor-styles-wrapper .c9-cta .c9-h p {
 	font-family: $headings-font-family;
-	letter-spacing: -.02em;
+	letter-spacing: -.8px;
 }
 
 .single-post .c9 h1 {
@@ -798,7 +784,7 @@ p.wp-block-subhead,
 	white-space: nowrap;
 }
 
-.footer-search #searchsubmit {
+.footer-search input[type="submit"] {
 	font-size: 10px;
 }
 
@@ -1834,14 +1820,17 @@ p.demo_store {
 	background-color: transparent;
 }
 
-.footer-entirety p {
-	font-size: 1.4em;
-}
-
 .footer-entirety {
 	overflow: visible;
 	clear: both;
-	font-size: 10px;
+}
+
+.footer-entirety .textwidget {
+	font-size: inherit;
+}
+
+.footer-entirety .footer-widget {
+	font-size: 1.4em;
 }
 
 @media only screen and (max-width: 1024px) {
