@@ -30,14 +30,6 @@ if (!function_exists('c9_client_setup')) {
 
 	function c9_client_setup()
 	{
-		/*
-		 * Enable support for Post Formats.
-		 * See http://codex.wordpress.org/Post_Formats
-		 */
-		add_theme_support('post-formats', array(
-			'video',
-			'quote'
-		));
 
         // Make specific theme colors available in the editor.
         add_theme_support('editor-color-palette', array(

@@ -69,6 +69,7 @@
 									'fallback_cb'     => '',
 									'menu_id'         => 'main-menu',
 									'depth'           => 2,
+									'link_after'	  => '<span></span>',
 									'walker'          => new c9_WP_Bootstrap_Navwalker(),
 								)
 							);

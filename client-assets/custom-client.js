@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
 jQuery(document).ready(function () {
 	(function ($) {
 		if (jQuery("body.home").length) {
@@ -13,7 +15,7 @@ jQuery(document).ready(function () {
 
 					// scroll to that part of the page
 					gsap.to(window, {
-						duration: 2,
+						duration: 1.5,
 						scrollTo: {
 							y: anchorID,
 							offsetY: 55
@@ -28,37 +30,47 @@ jQuery(document).ready(function () {
 	})(jQuery);
 });
 
-// // add scenes for home scrolling nav links if user is on homepage
-// if (jQuery("body.home").length) {
-// 	// init controller
-// 	var controller = new ScrollTrigger.create({
-// 		globalSceneOptions: {
-// 			duration: "100%",
-// 			triggerHook: 0.5
-// 		}
-// 	});
+// add scenes for home scrolling nav links if user is on homepage
+if (jQuery("body.home").length) {
 
-// 	//set up array of links in nav linking to on-page anchors
-// 	var navLinks = [];
+	//set up array of links in nav linking to on-page anchors
+	var navLinks = [];
 
-// 	jQuery(
-// 		".nav-link[href^='/#'], .scroll-me a[href^='/#'], .dropdown-item[href^='/#']"
-// 	).each(function () {
-// 		// get all link IDs and put them in array from header and direct clicked scroll links
-// 		navLinks.push(jQuery(this).attr("href"));
-// 	});
+	jQuery(
+		".nav-link[href^='/#'], .scroll-me a[href^='/#'], .dropdown-item[href^='/#']"
+	).each(function () {
+		// get all link IDs and put them in array from header and direct clicked scroll links
+		navLinks.push(jQuery(this).attr("href"));
+	});
 
-// 	//loop through those links and add a scene for each that links up properly
-// 	var setSceneNum = navLinks.length;
+	//loop through those links and add a scene for each that links up properly
+	var setSceneNum = navLinks.length;
 
-// 	for (var i = 0; i < setSceneNum; i++) {
-// 		var anchorID = navLinks[i].substr(1);
-// 		var classLabel = navLinks[i].substr(2);
+	gsap.defaults({
+		ease: "power1.out"
+	});
 
-// 		new ScrollMagic.Scene({
-// 				triggerElement: anchorID
-// 			})
-// 			.setClassToggle(".c9-" + classLabel, "nav-highlight") // add class toggle
-// 			.addTo(controller);
-// 	}
-// }
+	for (var i = 0; i < setSceneNum; i++) {
+
+		var anchorID = navLinks[i].substr(1);
+		var navItemActive = 'a[href="/' + anchorID + '"]';
+
+		console.log("anchorID: " + anchorID + " navItemActive: " + navItemActive);
+
+		var tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: anchorID,
+				scrub: 1,
+				start: "top bottom",
+				end: "+=100%"
+			}
+		});
+
+		tl.to(navItemActive, {
+			// x: 100
+		});
+
+		//.setClassToggle(".c9-" + classLabel, "nav-highlight") // add class toggle
+
+	}
+}
