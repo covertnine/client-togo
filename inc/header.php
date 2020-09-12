@@ -9,8 +9,6 @@
 ?>
  			<div id="wrapper-navbar" class="header-navbar" itemscope itemtype="http://schema.org/WebSite">
 
-				<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'c9-togo' ); ?></a>
-
 				<nav class="navbar navbar-expand-lg navbar-light">
 
 					<div class="container">
@@ -40,7 +38,7 @@
 									if ( $count != 0 ) {
 										echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . wc_get_cart_url() . '" title="Shopping Cart" class="nav-link"><span class="sr-only">' . __('View Cart', 'c9-togo') . '</span> <i class="fa fa-shopping-cart fa-md"></i><span class="count">' . $count . '</span></a></div>';
 									} else { //if not just put in an icon
-										echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . wc_get_cart_url() . '" title="Shopping Cart" class="nav-link"><i class="fa fa-shopping-cart fa-md"></i> <span class="sr-only">' . __('View Cart', 'c9-togo') . '</span></a></div>';
+										echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . wc_get_cart_url() . '" title="Shopping Cart" class="nav-link nav-shop-link"><i class="fa fa-shopping-cart fa-md"></i> <span class="sr-only">' . __('View Cart', 'c9-togo') . '</span></a></div>';
 									} //end count check
 								} //end if woocommerce is active
 								?>

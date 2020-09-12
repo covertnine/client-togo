@@ -152,9 +152,17 @@ a:hover {
 	font-size: 2em;
 }
 
-.header-navbar .nav-order .nav-link {
+.header-navbar .nav-order .nav-link,
+.header-navbar .dropdown-item:focus,
+.header-navbar .dropdown-item:hover,
+.header-navbar .nav-search .btn-nav-search:focus,
+.header-navbar .nav-search .btn-nav-search:hover,
+.header-navbar .navbar-light .navbar-nav .nav-link:focus,
+.header-navbar .navbar-light .navbar-nav .nav-link:hover,
+.header-navbar .navbar-light .navbar-toggler:focus,
+.header-navbar .navbar-light .navbar-toggler:hover {
 	text-decoration: none;
-	color: $dark;
+	color: $link-color;
 }
 
 @-webkit-keyframes fadeInFromNone {
@@ -218,6 +226,24 @@ a:hover {
 .nav-woocommerce:hover a:before,
 .nav-woocommerce:hover a span {
 	display: none;
+}
+
+@media only screen and (max-width: 991px) {
+
+	.nav-search,
+	.nav-toggle,
+	.nav-order {
+		display: inline-block;
+		width: 40px;
+	}
+
+	.navbar-toggler[aria-expanded=true] .fa-bars:before {
+		content: '\f00d';
+	}
+
+	.header-navbar .nav .nav-woocommerce.nav-item {
+		display: none;
+	}
 }
 
 /****************************************************************************************/
@@ -329,6 +355,7 @@ a:hover {
 .editor-styles-wrapper .c9-cta .c9-h p {
 	font-family: $headings-font-family;
 	letter-spacing: -.8px;
+	font-weight: $headings-font-weight;
 }
 
 .single-post .c9 h1 {
@@ -378,10 +405,25 @@ p.wp-block-subhead,
 	font-weight: 700;
 }
 
+#fullscreensearch .search-close:hover {
+	opacity: .8;
+}
+
+#fullscreensearch .search-close:focus {
+	outline: 1px solid transparent;
+}
+
+#fullscreensearch input[type=search]:focus,
+#fullscreensearch form .btn:focus,
+.search-close:focus {
+	box-shadow: 1px 1px 8px rgba(0, 0, 0, .6);
+	outline: 0;
+}
+
 #fullscreensearch form .btn {
 	font-family: $font-family-base;
 	padding: 16px 55px;
-	font-size: 1.2em;
+	font-size: 1.4em;
 	border-radius: 34px;
 	margin-top: 20px;
 }
@@ -814,7 +856,7 @@ p.wp-block-subhead,
 	.wp-block-file__button,
 	.wp-block-file .wp-block-file__button {
 		font-size: 10px;
-		letter-spacing: .02em;
+		letter-spacing: 1px;
 		padding: 8px 15px;
 	}
 }

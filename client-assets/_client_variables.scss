@@ -8,22 +8,13 @@
 }
 
 // Typography
-$headings-font-family: 'Sen',
-"helvetica",
-times,
-serif;
+$headings-font-family: inherit;
 $headings-font-weight: 700;
 
-$font-family-sans-serif: 'Sen',
-"helvetica",
-times,
-serif;
-$font-family-base: 'Sen',
-"helvetica",
-times,
-serif;
+$font-family-sans-serif: inherit;
+$font-family-base: inherit;
 
-$line-height-base: 1.3;
+$line-height-base: 1.1;
 
 $gray-300: $gray-500;
 $font-weight-base: 400;
