@@ -1,8 +1,12 @@
 <?php
-/* WooCommerce Specific filters and functionality for C9 Band */
+/**
+ * Togo WooCommerce Specific filters
+ *
+ * @package c9-togo
+ */
 
-add_action( 'after_setup_theme', 'c9_add_woocommerce_support' );
-function c9_add_woocommerce_support() {
+add_action( 'after_setup_theme', 'c9togo_add_woocommerce_support' );
+function c9togo_add_woocommerce_support() {
 
 	add_theme_support( 'woocommerce' );
     // remove related products from single
@@ -20,13 +24,6 @@ add_filter( 'woocommerce_helper_suppress_admin_notices', '__return_true' );
 add_filter('woocommerce_template_path', function () {
     return 'client/woocommerce/';
 });
-
-/* fixes gravity forms ugly spinner */
-add_filter( 'gform_ajax_spinner_url', 'gf_spinner_replace', 10, 2 );
-function gf_spinner_replace( $image_src, $form ) {
-	return  'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; // relative to you theme images folder
-}
-
 
 // $path defaults to 'woocommerce/' (in client folder)
 add_filter('woocommerce_template_path', function () {
@@ -52,8 +49,8 @@ add_filter( 'template_include', function( $template ) {
 /****************************************************************************************/
 
 // append shopping cart if enabled
-add_filter( 'wp_nav_menu_items', 'c9_add_woocommerce_icon', 9, 2 );
-function c9_add_woocommerce_icon( $items, $args ) {
+add_filter( 'wp_nav_menu_items', 'c9togo_add_woocommerce_icon', 9, 2 );
+function c9togo_add_woocommerce_icon( $items, $args ) {
 
 	if ( defined('WC_VERSION') ) { //show cart contents if woo is active
 
@@ -116,9 +113,3 @@ function translate_reply($translated) {
 	$translated = str_ireplace('Shipping', 'Delivery', $translated);
 	return $translated;
 }
-
-/* hiding nag message from wooODT Lite */
-remove_filter( 'admin_notices', 'byconsolewooodt_free_plugin_activation_admin_notice_error');
-
-/* hiding nag message from NMI integration for payments */
-remove_filter( 'admin_notices', 'patsatech_license_woo_nmi_direct_notice');

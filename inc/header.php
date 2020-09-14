@@ -1,10 +1,10 @@
 <?php
 /**
- * The header for our client theme.
+ * The header for our C9 Togo Theme
  *
  * Displays all of the <head> section and everything up till <div id="content"> and overrides the default header.php if its available.
  *
- * @package C9
+ * @package c9-togo
  */
 ?>
  			<div id="wrapper-navbar" class="header-navbar" itemscope itemtype="http://schema.org/WebSite">

@@ -3,7 +3,7 @@
 /**
  * Togo Client Setup
  *
- * @package C9
+ * @package c9-togo
  */
 
 /* Custom Block Styles */
