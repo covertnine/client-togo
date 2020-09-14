@@ -223,7 +223,8 @@ a:hover {
 }
 
 .nav-woocommerce:hover a:before,
-.nav-woocommerce:hover a .nav-highlight {
+.nav-woocommerce:hover a .nav-highlight,
+.nav-link .view-cart {
 	display: none;
 }
 
@@ -238,6 +239,10 @@ a:hover {
 
 	.navbar-toggler[aria-expanded=true] .fa-bars:before {
 		content: '\f00d';
+	}
+
+	.nav-link .view-cart {
+		display: inline;
 	}
 
 }
