@@ -80,8 +80,7 @@ a:hover {
 .header-navbar .navbar .nav .nav-item,
 .header-navbar .navbar .nav .nav-item .dropdown-item,
 .header-navbar .navbar .nav .nav-item .nav-link,
-.header-navbar .navbar .nav .search,
-.header-navbar .navbar .nav a span {
+.header-navbar .navbar .nav .search {
 	line-height: 1;
 }
 
@@ -93,7 +92,7 @@ a:hover {
 	margin: 0px 6px;
 }
 
-.header-navbar .navbar .nav>.nav-item>.nav-link span {
+.header-navbar .navbar .nav>.nav-item>.nav-link .nav-highlight {
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -104,8 +103,8 @@ a:hover {
 	height: 4px;
 }
 
-.header-navbar .navbar .nav>.nav-item:focus>.nav-link span,
-.header-navbar .navbar .nav>.nav-item.nav-highlight>.nav-link span {
+.header-navbar .navbar .nav>.nav-item:focus>.nav-link .nav-highlight,
+.header-navbar .navbar .nav>.nav-item.nav-highlight>.nav-link .nav-highlight {
 	right: 0%;
 }
 
@@ -224,7 +223,7 @@ a:hover {
 }
 
 .nav-woocommerce:hover a:before,
-.nav-woocommerce:hover a span {
+.nav-woocommerce:hover a .nav-highlight {
 	display: none;
 }
 

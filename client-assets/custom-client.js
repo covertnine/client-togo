@@ -60,12 +60,12 @@ if (jQuery("body.home").length) {
 		// test for slashes at beginning of link string
 		if (navLinks[i].substr(0, 1) === '/') {
 			var anchorID = navLinks[i].substr(1);
-			var navItemActive = '[href="/' + anchorID + '"] span';
+			var navItemActive = '[href="/' + anchorID + '"] .nav-highlight';
 		} else {
 			// eslint-disable-next-line no-redeclare
 			var anchorID = navLinks[i];
 			// eslint-disable-next-line no-redeclare
-			var navItemActive = '[href="' + anchorID + '"] span';
+			var navItemActive = '[href="' + anchorID + '"] .nav-highlight';
 		}
 
 		// console.log("anchorID: " + anchorID + " navItemActive: " + navItemActive);
