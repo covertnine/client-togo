@@ -10,9 +10,7 @@ if (!function_exists('c9togo_client_scripts')) {
 	/**
 	 * Load theme's JavaScript and CSS sources.
 	 */
-	function c9togo_client_scripts()
-	{
-
+	function c9togo_client_scripts() {
 
 		$c9_default_font = get_theme_mod('c9_default_font');
 
