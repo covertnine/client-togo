@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 jQuery(document).ready(function () {
@@ -8,6 +9,8 @@ jQuery(document).ready(function () {
 				".nav-link[href^='/#'], .dropdown-item[href^='/#'], a[href^='/#'], a[href^='#']:not(.btn-nav-search)",
 				function (event) {
 					event.preventDefault();
+
+					$(".navbar-toggler").attr("aria-expanded", "false").addClass('collapsed');
 
 					//what link was clicked
 					var sectionLink = $(event.target).attr("href");
@@ -59,7 +62,9 @@ if (jQuery("body.home").length) {
 			var anchorID = navLinks[i].substr(1);
 			var navItemActive = '[href="/' + anchorID + '"] span';
 		} else {
+			// eslint-disable-next-line no-redeclare
 			var anchorID = navLinks[i];
+			// eslint-disable-next-line no-redeclare
 			var navItemActive = '[href="' + anchorID + '"] span';
 		}
 
