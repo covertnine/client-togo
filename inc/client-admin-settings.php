@@ -22,9 +22,32 @@ if (!function_exists('c9togo_customize_register')) {
 	function c9togo_customize_register($wp_customize)
 	{
 		$wp_customize->add_setting(
+			'c9togo_link_hover',
+			array(
+				'default'           => '',
+				'sanitize_callback' => 'sanitize_hex_color',
+				'type' 				=> 'theme_mod',
+				'capability' 		=> 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'c9togo_link_hover',
+				array(
+					'label'      => esc_html__('Link Hover', 'c9-togo'),
+					'section'    => 'colors',
+					'settings'	 => 'c9togo_link_hover',
+					'priority'	 => 10
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
 			'c9togo_nav_link',
 			array(
-				'default'           => '#000000',
+				'default'           => '',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -47,7 +70,7 @@ if (!function_exists('c9togo_customize_register')) {
 		$wp_customize->add_setting(
 			'c9togo_nav_link_hover',
 			array(
-				'default'           => '#00d082',
+				'default'           => '',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -70,7 +93,7 @@ if (!function_exists('c9togo_customize_register')) {
 		$wp_customize->add_setting(
 			'c9togo_nav_dropdown_menu',
 			array(
-				'default'           => '#00d082',
+				'default'           => '',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -93,7 +116,7 @@ if (!function_exists('c9togo_customize_register')) {
 		$wp_customize->add_setting(
 			'c9togo_nav_dropdown_link',
 			array(
-				'default'           => '#000000',
+				'default'           => '',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -116,7 +139,7 @@ if (!function_exists('c9togo_customize_register')) {
 		$wp_customize->add_setting(
 			'c9togo_nav_dropdown_link_hover_bg',
 			array(
-				'default'           => '#000000',
+				'default'           => '',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -139,7 +162,7 @@ if (!function_exists('c9togo_customize_register')) {
 		$wp_customize->add_setting(
 			'c9togo_nav_dropdown_link_hover',
 			array(
-				'default'           => '#ffffff',
+				'default'           => '',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -162,7 +185,7 @@ if (!function_exists('c9togo_customize_register')) {
 		$wp_customize->add_setting(
 			'c9togo_nav_mobile_menu',
 			array(
-				'default'           => '#ffffff',
+				'default'           => '',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -186,7 +209,7 @@ if (!function_exists('c9togo_customize_register')) {
 		$wp_customize->add_setting(
 			'c9togo_store_notice',
 			array(
-				'default'           => '#02a665',
+				'default'           => '',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -209,7 +232,7 @@ if (!function_exists('c9togo_customize_register')) {
 		$wp_customize->add_setting(
 			'c9togo_store_notice_text',
 			array(
-				'default'           => '#ffffff',
+				'default'           => '',
 				'sanitize_callback' => 'sanitize_hex_color',
 				'type' 				=> 'theme_mod',
 				'capability' 		=> 'edit_theme_options',
@@ -228,7 +251,6 @@ if (!function_exists('c9togo_customize_register')) {
 				)
 			)
 		);
-
 	}
 }
 add_action('customize_register', 'c9togo_customize_register');
@@ -248,8 +270,18 @@ function c9_togo_custom_css_output()
 	$c9togo_nav_dropdown_link_hover 	= get_theme_mod('c9togo_nav_dropdown_link_hover', '');
 	$c9togo_store_notice				= get_theme_mod('c9togo_store_notice', '');
 	$c9togo_store_notice_text			= get_theme_mod('c9togo_store_notice_text', '');
+	$c9togo_link_hover					= get_theme_mod('c9togo_link_hover', '');
 
 	$c9_togo_custom_css 	= '';
+
+	if (!empty($c9togo_link_hover)) {
+		$c9_togo_custom_css .= '
+		.wc-block-grid__product-link:hover .wc-block-grid__product-title, .wc-block-grid__product-link:hover .wc-block-grid__product-title:hover,
+		.entry-content a:hover,
+		.widget_nav_menu .menu-item a:hover,
+		.widget_recent_entries a:hover,
+		#wrapper-footer .site-footer a:hover {color: ' . $c9togo_link_hover . ';}';
+	}
 
 	if (!empty($c9togo_nav_mobile_menu)) {
 		$c9_togo_custom_css .=  '@media only screen and (max-width: 991px) {
@@ -274,11 +306,15 @@ function c9_togo_custom_css_output()
 
 	if (!empty($c9togo_nav_link_hover)) {
 		$c9_togo_custom_css .= '
-		.header-navbar .dropdown-item:hover, .header-navbar .nav-link:hover,
+		.header-navbar .navbar:not(.navbar-small) .nav-link:hover,
+		.header-navbar .dropdown-item:hover,
+		.header-navbar .navbar-toggler:hover,
+		.header-navbar .nav-link:hover,
+		.header-navbar .nav>.nav-item>.nav-link:focus,
 		.header-navbar .nav-search .btn-nav-search:focus,
 		.header-navbar .nav-search .btn-nav-search:hover,
-		.header-navbar .nav>.nav-item>.nav-link:focus,
-		.header-navbar .navbar:not(.navbar-small) .nav-link:hover {color: ' . $c9togo_nav_link_hover . ';}';
+		.header-navbar .nav-woocommerce .nav-link:hover,
+		.header-navbar .nav-woocommerce .nav-link:focus {color: ' . $c9togo_nav_link_hover . ';}';
 	}
 
 	if (!empty($c9togo_nav_dropdown_link)) {
@@ -301,7 +337,7 @@ function c9_togo_custom_css_output()
 			.woocommerce-store-notice, p.demo_store { background-color: ' . $c9togo_store_notice . ';}';
 	}
 
-		if (!empty($c9togo_store_notice_text)) {
+	if (!empty($c9togo_store_notice_text)) {
 		$c9_togo_custom_css .=  '
 			.woocommerce-store-notice, p.demo_store,
 			.woocommerce-store-notice, p.demo_store a { color: ' . $c9togo_store_notice_text . ';}';

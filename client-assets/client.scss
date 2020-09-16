@@ -334,7 +334,9 @@ a:hover {
 .header-navbar .nav-link:hover,
 .header-navbar .nav>.nav-item>.nav-link:focus,
 .header-navbar .nav-search .btn-nav-search:focus,
-.header-navbar .nav-search .btn-nav-search:hover {
+.header-navbar .nav-search .btn-nav-search:hover,
+.header-navbar .nav-woocommerce .nav-link:hover,
+.header-navbar .nav-woocommerce .nav-link:focus {
 	color: $primary;
 }
 
