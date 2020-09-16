@@ -33,7 +33,8 @@ function c9togo_nav_custom_fields($item_id, $item)
 		<input type="hidden" class="nav-menu-id" value="<?php echo $item_id; ?>" />
 		<select name="c9work_custom_menu_meta[<?php echo $item_id; ?>]" id="custom-menu-meta-for-<?php echo $item_id; ?>">
 			<option value="" <?php if ((esc_attr($c9work_custom_menu_meta) == "") || (empty($c9work_custom_menu_meta))) echo " selected"; ?>>Default</option>
-			<option value="c9-order-now" <?php if (esc_attr($c9work_custom_menu_meta) == "c9-order-now") echo " selected"; ?>>Green Button</option>
+			<option value="c9-order-now" <?php if (esc_attr($c9work_custom_menu_meta) == "c9-order-now") echo " selected"; ?>><?php esc_html_e("Green Button", 'c9-togo'); ?></option>
+			<option value="c9-yellow-btn" <?php if (esc_attr($c9work_custom_menu_meta) == "c9-yellow-btn") echo " selected"; ?>><?php esc_html_e("Yellow Button", 'c9-togo'); ?></option>
 		</select>
 
 
@@ -69,9 +70,9 @@ add_action('wp_update_nav_menu_item', 'c9togo_nav_update', 10, 2);
 
 
 /**
- * Displays text on the front-end.
+ * Displays select drop down on the front-end.
  *
- * @param string   $title The menu item's title.
+ * @param string   $classes The css classes with the nav item
  * @param WP_Post  $item  The current menu item.
  * @return string
  */

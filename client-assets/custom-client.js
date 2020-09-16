@@ -6,7 +6,7 @@ jQuery(document).ready(function () {
 		if (jQuery("body.home").length) {
 			$(".c9").on(
 				"click",
-				".nav-link[href^='/#'], .dropdown-item[href^='/#'], a[href^='/#'], a[href^='#']:not(.btn-nav-search)",
+				".nav-link[href^='/#'], .dropdown-item[href^='/#'], a[href^='/#'], a[href^='#']:not(.btn-nav-search):not(.dropdown-toggle)",
 				function (event) {
 					event.preventDefault();
 
@@ -42,7 +42,7 @@ if (jQuery("body.home").length) {
 	var navLinks = [];
 
 	jQuery(
-		".nav-link[href^='/#'], .dropdown-item[href^='/#'], .nav-link[href^='#']:not(.btn-nav-search), .dropdown-item[href^='#']"
+		".nav-link[href^='/#'], .dropdown-item[href^='/#'], .nav-link[href^='#']:not(.btn-nav-search):not(.dropdown-toggle), .dropdown-item[href^='#']:not(.dropdown-toggle)"
 	).each(function () {
 		// get all link IDs and put them in array from header and direct clicked scroll links
 		navLinks.push(jQuery(this).attr("href"));

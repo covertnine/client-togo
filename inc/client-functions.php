@@ -21,6 +21,11 @@ require_once "client-editor.php";
 require_once "client-setup.php";
 
 /**
+ * Adds additional theme settings to customizer
+ */
+require_once "client-admin-settings.php";
+
+/**
 * Client WooCommerce
 */
 require_once "client-woocommerce.php";
