@@ -6,7 +6,7 @@ jQuery(document).ready(function () {
 		if (jQuery("body.home").length) {
 			$(".c9").on(
 				"click",
-				".nav-link[href^='/#'], .dropdown-item[href^='/#'], a[href^='/#'], a[href^='#']:not(.btn-nav-search):not(.dropdown-toggle)",
+				".nav-link[href^='/#'], .dropdown-item[href^='/#'], a[href^='/#'], a[href^='#']:not(.btn-nav-search):not(.dropdown-toggle):not(.btn-back-to-top)",
 				function (event) {
 					event.preventDefault();
 
@@ -32,6 +32,7 @@ jQuery(document).ready(function () {
 				}
 			);
 		} //end seeing if they're on the home page.
+
 	})(jQuery);
 });
 
