@@ -25,6 +25,15 @@ register_block_style(
 	)
 );
 
+/* add style for green gradient buttons */
+register_block_style(
+	'core/button',
+	array(
+		'name'         => 'c9-btn-green',
+		'label'        => __('Green Gradient', 'c9-togo'),
+	)
+);
+
 add_action('after_setup_theme', 'c9_client_setup');
 if (!function_exists('c9_client_setup')) {
 

@@ -284,7 +284,8 @@ a:hover {
 }
 
 .c9 .header-navbar .navbar-nav .nav-item.c9-order-now.active>.nav-link,
-.c9 .header-navbar .navbar-nav .nav-item.c9-order-now>.nav-link {
+.c9 .header-navbar .navbar-nav .nav-item.c9-order-now>.nav-link,
+.is-style-c9-btn-green .wp-block-button__link {
 	padding-left: 14px;
 	padding-right: 14px;
 	color: $light;
@@ -299,7 +300,8 @@ a:hover {
 }
 
 .c9 .header-navbar .navbar-nav .nav-item.c9-order-now .nav-link:hover,
-.c9 .header-navbar.navbar-small .navbar-nav .nav-item.c9-order-now .nav-link:hover {
+.c9 .header-navbar.navbar-small .navbar-nav .nav-item.c9-order-now .nav-link:hover,
+.is-style-c9-btn-green:hover .wp-block-button__link {
 	background: linear-gradient(343deg, rgb(255, 230, 5) 0%, rgb(242, 255, 3) 100%);
 	color: $dark !important;
 }
@@ -394,7 +396,6 @@ a:hover {
 .display-5,
 .display-6,
 .editor-styles-wrapper .c9-cta .c9-h p {
-	font-family: $headings-font-family;
 	letter-spacing: -.8px;
 	font-weight: $headings-font-weight;
 }
