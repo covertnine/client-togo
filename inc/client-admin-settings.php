@@ -314,7 +314,9 @@ function c9_togo_custom_css_output()
 		.header-navbar .nav-search .btn-nav-search:focus,
 		.header-navbar .nav-search .btn-nav-search:hover,
 		.header-navbar .nav-woocommerce .nav-link:hover,
-		.header-navbar .nav-woocommerce .nav-link:focus {color: ' . $c9togo_nav_link_hover . ';}';
+		.header-navbar .nav-woocommerce .nav-link:focus,
+		.navbar-light .navbar-nav .nav-link:focus,
+		.navbar-light .navbar-nav .nav-link:hover {color: ' . $c9togo_nav_link_hover . ';}';
 	}
 
 	if (!empty($c9togo_nav_dropdown_link)) {
