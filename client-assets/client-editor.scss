@@ -148,3 +148,9 @@ div[data-type="c9-blocks/column-container"] .editor-block-list__block-edit.block
 .wp-block-buttons:not(.is-selected)>.block-editor-inner-blocks .block-list-appender:last-child {
 	display: none;
 }
+
+/* c9 core block toggles */
+.block-editor-block-list__layout .block-editor-block-list__block[data-type="c9-blocks/toggles"] {
+	margin: 0px;
+	padding: 0px;
+}
