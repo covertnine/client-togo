@@ -973,7 +973,8 @@ p.wp-block-subhead,
 .wp-block-button:not(.is-style-outline) .wp-block-button__link.mce-content-body,
 .wp-block-file__button,
 .wp-block-file .wp-block-file__button,
-#searchsubmit {
+#searchsubmit,
+.wp-block-button__link:not([href]):not([tabindex]) {
 	font-weight: 700;
 	font-family: $font-family-base;
 	letter-spacing: .09em;
@@ -982,6 +983,7 @@ p.wp-block-subhead,
 	border-radius: 0px;
 	border-radius: 34px;
 	white-space: nowrap;
+	padding: 12px 35px;
 }
 
 .footer-search input[type="submit"] {
@@ -1092,7 +1094,15 @@ p.wp-block-subhead,
 .woocommerce-cart table.cart td.actions .coupon .input-text,
 .woocommerce-checkout table.cart td.actions .coupon .input-text,
 .single_variation_wrap,
-.wc-block-product-categories select {
+.wc-block-product-categories select,
+.archive nav .pagination .page-item .page-link,
+.blog nav .pagination .page-item .page-link,
+.c9 .woocommerce nav.woocommerce-pagination ul li .page-numbers,
+.c9 .woocommerce nav.woocommerce-pagination ul li span,
+.page-search-results nav .pagination .page-item .page-link,
+.post-page-numbers,
+.single .navigation .nav-next a,
+.single .navigation .nav-previous a {
 	font-size: 16px;
 }
 
@@ -1389,6 +1399,11 @@ p.wp-block-subhead,
 .c9 .woocommerce-Price-amount,
 .c9 .wc-block-grid__product-price.price {
 	color: $gray-900;
+}
+
+.c9 .wc-block-featured-product .woocommerce-Price-amount,
+.c9 .wc-block-featured-product .wc-block-grid__product-price.price {
+	color: $light;
 }
 
 /* woocommerce dialog notices */
