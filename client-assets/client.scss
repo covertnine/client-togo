@@ -484,7 +484,7 @@ p.wp-block-subhead,
 }
 
 #fullscreensearch .search-close:focus {
-	outline: 1px solid transparent;
+	outline: 1px dotted $dark;
 }
 
 #fullscreensearch input[type=search]:focus,
@@ -521,6 +521,72 @@ p.wp-block-subhead,
 
 .entry-content .has-covertnine-palette-1-color a:hover {
 	color: $gray-500;
+}
+
+/* Custom Togo Colors and outline button colors */
+.is-style-outline .wp-block-button__link,
+.is-style-outline .wp-block-button__link:not([href]):not([tabindex]) {
+	border: 2px solid;
+}
+
+.is-style-outline,
+.is-style-outline .has-text-color {
+	background-color: transparent;
+}
+
+.is-style-outline .wp-block-button__link,
+.is-style-outline .wp-block-button__link:not([href]):not([tabindex]) {
+	background-color: inherit;
+}
+
+.is-style-outline .has-color-faded-green-color,
+.color-faded-green {
+	color: #7adcb4;
+}
+
+.is-style-outline .has-color-green-color,
+.has-color-green-color {
+	color: $primary;
+}
+
+.is-style-outline .has-color-yellow-color,
+.has-color-yellow-color {
+	color: #ffe605;
+}
+
+.is-style-outline .has-color-light-gray-color,
+.has-color-light-gray-color {
+	color: #b0b0b0;
+}
+
+.is-style-outline .has-color-dark-gray-color,
+.has-color-dark-gray-color {
+	color: #242424;
+}
+
+.is-style-outline .has-color-white-color,
+.has-color-white-color {
+	color: $light;
+}
+
+.is-style-outline .has-color-orange-color,
+.has-color-orange-color {
+	color: #ffb442;
+}
+
+.is-style-outline .has-color-alt-green-color,
+.has-color-alt-green-color {
+	color: #00ff8c;
+}
+
+.is-style-outline .has-color-blue-color,
+.has-color-blue-color {
+	color: #2e46d3;
+}
+
+.is-style-outline .has-color-black-color,
+.has-color-black-color {
+	color: $dark;
 }
 
 /****************************************************************************************/
@@ -1075,8 +1141,10 @@ p.wp-block-subhead,
 	white-space: nowrap;
 }
 
-.c9 .entry-content .wp-block-button__link:visited,
-.c9 .entry-content .wp-block-button__link:hover {
+.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:visited,
+.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover,
+.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
+.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:not([href]):not([tabindex]) {
 	color: $light;
 }
 
