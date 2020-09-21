@@ -14,19 +14,15 @@
 					<div class="container">
 						<?php
 
-							// Use customizer logo, if that's not set, show text of site title
-							$c9_site_name = get_bloginfo( 'name' );
-
 							if (has_custom_logo()) {
 								the_custom_logo();
 							}
 						?>
-
 						<div class="navbar-small-buttons">
 							<div class="nav-search">
 								<a href="#" class="btn-nav-search">
 									<i class="fa fa-search"></i>
-									<span class="sr-only"><?php __( 'Search', 'c9-togo' ); ?></span>
+									<span class="sr-only"><?php esc_html_e( 'Search', 'c9-togo' ); ?></span>
 								</a>
 							</div>
 							<div class="nav-order d-inline-block d-lg-none">
@@ -36,9 +32,9 @@
 
 									//if there are items in the cart, put a number in front of the icon
 									if ( $count != 0 ) {
-										echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . wc_get_cart_url() . '" title="Shopping Cart" class="nav-link nav-shop-link"><span class="sr-only">' . __('View Cart', 'c9-togo') . '</span> <i class="fa fa-shopping-cart fa-md"></i><span class="count">' . $count . '</span></a></div>';
+										echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . esc_url(wc_get_cart_url()) . '" title="' . esc_attr__('Shopping Cart', 'c9-togo') . '" class="nav-link nav-shop-link"><span class="sr-only">' . esc_html__('View Cart', 'c9-togo') . '</span> <i class="fa fa-shopping-cart fa-md"></i><span class="count">' . $count . '</span></a></div>';
 									} else { //if not just put in an icon
-										echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . wc_get_cart_url() . '" title="Shopping Cart" class="nav-link nav-shop-link"><i class="fa fa-shopping-cart fa-md"></i> <span class="sr-only">' . __('View Cart', 'c9-togo') . '</span></a></div>';
+										echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . esc_url(wc_get_cart_url()) . '" title="' . esc_attr__('Shopping Cart', 'c9-togo') . '" class="nav-link nav-shop-link"><i class="fa fa-shopping-cart fa-md"></i> <span class="sr-only">' . esc_html__('View Cart', 'c9-togo') . '</span></a></div>';
 									} //end count check
 								} //end if woocommerce is active
 								?>
@@ -46,7 +42,7 @@
 							<?php if (has_nav_menu('primary')) { ?>
 
 							<div class="nav-toggle">
-								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'c9-togo'); ?>">
 									<i class="fa fa-bars"></i>
 								</button>
 							</div>
