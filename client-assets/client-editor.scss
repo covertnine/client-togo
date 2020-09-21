@@ -54,9 +54,20 @@ body .editor-styles-wrapper {
 .editor-styles-wrapper .button,
 .editor-styles-wrapper .button-primary,
 .editor-styles-wrapper .mce-content-body.button,
-.c9-block-cta .c9-cta-button a {
+.c9-block-cta .c9-cta-button a,
+.editor-styles-wrapper .btn,
+.editor-styles-wrapper .btn:visited,
+.editor-styles-wrapper button,
+.editor-styles-wrapper input[type=button],
+.editor-styles-wrapper input[type=reset],
+.editor-styles-wrapper input[type=submit],
+.wp-block-button__link,
+.wp-block-button__link:not([href]):not([tabindex]),
+.wp-block-file .wp-block-file__button,
+.wp-block-file__button {
 	text-transform: uppercase;
 	font-weight: 700;
+	font-size: 12px;
 }
 
 .editor-styles-wrapper .button:hover,
@@ -131,4 +142,9 @@ div[data-type="c9-blocks/column-container"] .editor-block-list__block-edit.block
 .entry-content p,
 .entry-footer {
 	line-height: $line-height-base;
+}
+
+/* core block edits */
+.wp-block-buttons:not(.is-selected)>.block-editor-inner-blocks .block-list-appender:last-child {
+	display: none;
 }

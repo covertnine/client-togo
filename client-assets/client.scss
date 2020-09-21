@@ -9,12 +9,28 @@
 	line-height: $line-height-base;
 }
 
+.editor-styles-wrapper .block-editor-rich-text__editable a,
+.entry-content p a:not(.wp-block-button__link):not(.nav-tabs):not([class|=c9-share]):not(.c9-smooth),
+.entry-title a,
 a {
 	color: $link-color;
 }
 
+.entry-title a {
+	text-decoration: none;
+}
+
+.entry-title a:hover {
+	text-decoration: underline;
+}
+
+.entry-content a:hover,
 a:hover {
 	color: $link-hover-color;
+}
+
+.site :focus {
+	outline-color: $link-color;
 }
 
 .site-main {
@@ -490,19 +506,6 @@ p.wp-block-subhead,
 	font-family: $headings-font-family !important;
 }
 
-.entry-content p a:not(.wp-block-button__link):not(.nav-tabs):not([class|=c9-share]):not(.c9-smooth),
-.entry-title a {
-	color: $link-color;
-}
-
-.entry-title a {
-	text-decoration: none;
-}
-
-.entry-title a:hover {
-	text-decoration: underline;
-}
-
 .entry-content .c9-grid-has-background .has-text-color a {
 	color: $light !important;
 }
@@ -511,9 +514,6 @@ p.wp-block-subhead,
 	color: $primary !important;
 }
 
-.entry-content a:hover {
-	color: $link-hover-color;
-}
 
 .entry-content .has-covertnine-palette-1-color a {
 	color: $light;
@@ -678,7 +678,8 @@ p.wp-block-subhead,
 
 .editor-styles-wrapper ul.wp-block[data-type="core/list"] li:before,
 .editor-styles-wrapper ul.wp-block-latest-posts li:before,
-.entry-content ul:not(.blocks-gallery-grid):not(.gform_fields) li:before {
+.entry-content ul:not(.blocks-gallery-grid):not(.gform_fields) li:before,
+.wc-block-product-categories-list li:before {
 	font-size: 14px;
 	content: "\f18e";
 	font-family: fontawesome;
