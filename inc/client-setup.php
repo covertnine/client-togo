@@ -94,7 +94,7 @@ if (!function_exists('c9_client_setup')) {
             ),
 		));
 
-				global $wp_filesystem;
+		global $wp_filesystem;
 		// Initialize the WP filesystem, no more using 'file-put-contents' function
 		if (empty($wp_filesystem)) {
 			require_once(ABSPATH . '/wp-admin/includes/file.php');
@@ -120,12 +120,6 @@ if (!function_exists('c9_client_setup')) {
 					'home'			=> array(
 						'comment_status'	=> 'closed',
 						'post_content'		=>  $wp_filesystem->get_contents(get_template_directory_uri() . '/client/content/home.html')
-					),
-					'about'			=> array(
-						'comment_status'	=> 'closed',
-						'post_type'			=> 'page',
-						'post_title'		=> __('About', 'c9-togo'),
-						'post_content'		=>  $wp_filesystem->get_contents(get_template_directory_uri() . '/client/content/about.html')
 					),
 					'setup'		=> array(
 						'comment_status'	=> 'closed',
@@ -154,7 +148,10 @@ if (!function_exists('c9_client_setup')) {
 					'custom_logo' 			=> '{{logo}}',
 					'c9_show_search'		=> 'show',
 					'c9_copyright_content'	=> '&copy; 2020. <a href="https://www.covertnine.com" title="Web design company in Chicago" target="_blank">WordPress Website design by COVERT NINE</a>.',
-					'c9_default_font'		=> 'no',
+					'c9_default_font'		=> 'yes',
+					'c9_heading_font'		=> 'Sen:400,700,800',
+					'c9_subheading_font'	=> 'Sen:400,700,800',
+					'c9_body_font'			=> 'Sen:400,700,800',
 					'c9_author_visible'		=> 'hide',
 					'c9_blog_sidebar'		=> 'hide',
 					'c9_archive_sidebar'	=> 'hide',
@@ -172,11 +169,6 @@ if (!function_exists('c9_client_setup')) {
 						'name'			=>	__('Top Navigation Menu', 'c9-togo'),
 						'items'			=> array(
 							'page_home',
-							'page_about'	=> array(
-								'type'		=> 'post_type',
-								'object'	=> 'page',
-								'object_id'	=> '{{about}}',
-							),
 							'page_setup'	=> array(
 								'type'		=> 'post_type',
 								'object'	=> 'page',
@@ -200,9 +192,6 @@ if (!function_exists('c9_client_setup')) {
 								'text'	=> '<ul id="menu-footer-resources" class="menu">
 									<li class="menu-item">
 										<a href="{{setup}}">Setup</a>
-									</li>
-									<li class="menu-item">
-										<a href="{{about}}">About</a>
 									</li>
 									<li class="menu-item">
 										<a href="{{blog}}">Blog</a>
