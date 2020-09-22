@@ -470,13 +470,12 @@ p.wp-block-subhead,
 }
 
 #fullscreensearch .search-close {
-	width: 46px;
-	height: 46px;
-	padding: 6px 15px 12px 15px;
-}
-
-#fullscreensearch .search-close .fa {
-	font-size: 20px;
+	width: 40px;
+	height: 40px;
+	font-size: 18px;
+	padding: 0;
+	line-height: 40px;
+	border-radius: 20px;
 }
 
 #fullscreensearch .search-close:hover {
@@ -531,62 +530,102 @@ p.wp-block-subhead,
 
 .is-style-outline,
 .is-style-outline .has-text-color {
-	background-color: transparent;
+	background-color: transparent !important;
 }
 
 .is-style-outline .wp-block-button__link,
 .is-style-outline .wp-block-button__link:not([href]):not([tabindex]) {
-	background-color: inherit;
+	background-color: inherit !important;
 }
 
 .is-style-outline .has-color-faded-green-color,
 .color-faded-green {
-	color: #7adcb4;
+	color: #7adcb4 !important;
+}
+
+.has-color-faded-green-background-coolor {
+	background-color: #7adcb4 !important;
 }
 
 .is-style-outline .has-color-green-color,
 .has-color-green-color {
-	color: $primary;
+	color: $primary !important;
+}
+
+.has-color-green-background-color {
+	background-color: $primary !important;
 }
 
 .is-style-outline .has-color-yellow-color,
 .has-color-yellow-color {
-	color: #ffe605;
+	color: #ffe605 !important;
+}
+
+.has-color-yellow-background-color {
+	background-color: #ffe605 !important;
 }
 
 .is-style-outline .has-color-light-gray-color,
 .has-color-light-gray-color {
-	color: #b0b0b0;
+	color: #b0b0b0 !important;
+}
+
+.has-color-light-gray-background-color {
+	background-color: #b0b0b0 !important;
 }
 
 .is-style-outline .has-color-dark-gray-color,
 .has-color-dark-gray-color {
-	color: #242424;
+	color: #242424 !important;
+}
+
+.has-color-dark-gray-background-color {
+	background-color: #242424 !important;
 }
 
 .is-style-outline .has-color-white-color,
 .has-color-white-color {
-	color: $light;
+	color: $light !important;
+}
+
+.has-color-white-background-color {
+	background-color: $light !important;
 }
 
 .is-style-outline .has-color-orange-color,
 .has-color-orange-color {
-	color: #ffb442;
+	color: #ffb442 !important;
+}
+
+.has-color-orange-background-color {
+	background-color: #ffb442 !important;
 }
 
 .is-style-outline .has-color-alt-green-color,
 .has-color-alt-green-color {
-	color: #00ff8c;
+	color: #00ff8c !important;
+}
+
+.has-color-alt-green-background-color {
+	background-color: #00ff8c !important;
 }
 
 .is-style-outline .has-color-blue-color,
 .has-color-blue-color {
-	color: #2e46d3;
+	color: #2e46d3 !important;
+}
+
+.has-color-blue-background-color {
+	background-color: #2e46d3 !important;
 }
 
 .is-style-outline .has-color-black-color,
 .has-color-black-color {
-	color: $dark;
+	color: $dark !important;
+}
+
+.has-color-black-background-color {
+	background-color: $dark !important;
 }
 
 /****************************************************************************************/
@@ -985,6 +1024,19 @@ p.wp-block-subhead,
 	padding: 12px 35px;
 }
 
+.c9 .entry-content .wp-block-button__link:active,
+.c9 .entry-content .wp-block-button__link:focus {
+	color: $light;
+	white-space: nowrap;
+}
+
+.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:visited,
+.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover,
+.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
+.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:not([href]):not([tabindex]) {
+	color: $light;
+}
+
 .footer-search input[type="submit"] {
 	font-size: 10px;
 }
@@ -1168,18 +1220,6 @@ p.wp-block-subhead,
 /* woocommerce buttons */
 /***************************************************************************************/
 
-.c9 .entry-content .wp-block-button__link:active,
-.c9 .entry-content .wp-block-button__link:focus {
-	color: $light;
-	white-space: nowrap;
-}
-
-.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:visited,
-.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover,
-.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
-.c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:not([href]):not([tabindex]) {
-	color: $light;
-}
 
 .c9 .woocommerce .woocommerce-form-login .woocommerce-form-login__submit {
 	letter-spacing: 1px;
