@@ -14,6 +14,7 @@
 .entry-title a,
 a {
 	color: $link-color;
+	text-decoration: none;
 }
 
 .entry-title a {
@@ -27,6 +28,7 @@ a {
 .entry-content a:hover,
 a:hover {
 	color: $link-hover-color;
+	text-decoration: underline;
 }
 
 .site :focus {
