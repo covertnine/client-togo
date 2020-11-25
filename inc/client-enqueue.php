@@ -10,7 +10,8 @@ if (!function_exists('c9togo_client_scripts')) {
 	/**
 	 * Load theme's JavaScript and CSS sources.
 	 */
-	function c9togo_client_scripts() {
+	function c9togo_client_scripts()
+	{
 
 		$c9_default_font = get_theme_mod('c9_default_font');
 
@@ -19,12 +20,8 @@ if (!function_exists('c9togo_client_scripts')) {
 		}
 
 		wp_enqueue_style('c9togo-client-styles', get_template_directory_uri() . '/client/client-assets/dist/client.min.css', array('c9-styles'));
-		wp_enqueue_script('c9-gsap', get_template_directory_uri() . '/client/client-assets/vendor/gsap.min.js', array('jquery'), false, true);
-		wp_enqueue_script('c9togo-scrollto', get_template_directory_uri() . '/client/client-assets/vendor/plugins/ScrollToPlugin.min.js', array('jquery', 'c9-gsap'), false, true);
-		wp_enqueue_script('c9togo-scrolltrigger', get_template_directory_uri() . '/client/client-assets/vendor/plugins/ScrollTrigger.min.js', array('jquery', 'c9-gsap'), false, true);
 		wp_enqueue_script('c9togo-client-scripts', get_template_directory_uri() . '/client/client-assets/custom-client.js', array('jquery', 'c9-scripts', 'c9-gsap'), false, true);
 		wp_add_inline_style('c9togo-client-styles', c9_togo_custom_css_output());
-
 	}
 } // endif function_exists( 'client_scripts' ).
 add_action('wp_enqueue_scripts', 'c9togo_client_scripts', 99);
