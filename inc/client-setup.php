@@ -40,58 +40,58 @@ if (!function_exists('c9_client_setup')) {
 	function c9_client_setup()
 	{
 
-        // Make specific theme colors available in the editor.
-        add_theme_support('editor-color-palette', array(
-            array(
-                'name' => 'light-gray',
-                'color'    => '#b0b0b0',
-                'slug' => 'color-light-gray',
-            ),
-            array(
-                'name' => 'yellow',
-                'color' => '#ffe605',
-                'slug'    => 'color-yellow',
-            ),
-            array(
-                'name' => 'faded-green',
-                'color'    => '#7adcb4',
-                'slug'    => 'color-faded-green',
-            ),
-            array(
-                'name' => 'green',
-                'color'    => '#00d082',
-                'slug'    => 'color-green',
-            ),
-            array(
-                'name' => 'dark-gray',
-                'color'    => '#242424',
-                'slug'    => 'color-dark-gray',
-            ),
-            array(
-                'name' => 'white',
-                'color'    => '#ffffff',
-                'slug' => 'color-white',
-            ),
-            array(
-                'name' => 'orange',
-                'color' => '#ffb442',
-                'slug'    => 'color-orange',
-            ),
-            array(
-                'name' => 'alt-green',
-                'color'    => '#00ff8c',
-                'slug'    => 'color-alt-green',
-            ),
-            array(
-                'name' => 'blue',
-                'color'    => '#2e46d3',
-                'slug'    => 'color-blue',
-            ),
-            array(
-                'name' => 'black',
-                'color'    => '#000000',
-                'slug'    => 'color-black',
-            ),
+		// Make specific theme colors available in the editor.
+		add_theme_support('editor-color-palette', array(
+			array(
+				'name' => 'light-gray',
+				'color'    => '#b0b0b0',
+				'slug' => 'color-light-gray',
+			),
+			array(
+				'name' => 'yellow',
+				'color' => '#ffe605',
+				'slug'    => 'color-yellow',
+			),
+			array(
+				'name' => 'faded-green',
+				'color'    => '#7adcb4',
+				'slug'    => 'color-faded-green',
+			),
+			array(
+				'name' => 'green',
+				'color'    => '#00d082',
+				'slug'    => 'color-green',
+			),
+			array(
+				'name' => 'dark-gray',
+				'color'    => '#242424',
+				'slug'    => 'color-dark-gray',
+			),
+			array(
+				'name' => 'white',
+				'color'    => '#ffffff',
+				'slug' => 'color-white',
+			),
+			array(
+				'name' => 'orange',
+				'color' => '#ffb442',
+				'slug'    => 'color-orange',
+			),
+			array(
+				'name' => 'alt-green',
+				'color'    => '#00ff8c',
+				'slug'    => 'color-alt-green',
+			),
+			array(
+				'name' => 'blue',
+				'color'    => '#2e46d3',
+				'slug'    => 'color-blue',
+			),
+			array(
+				'name' => 'black',
+				'color'    => '#000000',
+				'slug'    => 'color-black',
+			),
 		));
 
 		global $wp_filesystem;
@@ -119,19 +119,19 @@ if (!function_exists('c9_client_setup')) {
 				'posts'	=> array(
 					'home'			=> array(
 						'comment_status'	=> 'closed',
-						'post_content'		=>  $wp_filesystem->get_contents(get_template_directory_uri() . '/client/content/home.html')
+						'post_content'		=>  $wp_filesystem->get_contents(get_template_directory() . '/client/content/home.html')
 					),
 					'setup'		=> array(
 						'comment_status'	=> 'closed',
 						'post_type'			=> 'page',
 						'post_title'		=> __('Setup', 'c9-togo'),
-						'post_content'		=>  $wp_filesystem->get_contents(get_template_directory_uri() . '/client/content/setup.html')
+						'post_content'		=>  $wp_filesystem->get_contents(get_template_directory() . '/client/content/setup.html')
 					),
 					'styleguide'		=> array(
 						'comment_status'	=> 'closed',
 						'post_type'			=> 'page',
 						'post_title'		=> __('Style Guide', 'c9-togo'),
-						'post_content'		=>  $wp_filesystem->get_contents(get_template_directory_uri() . '/client/content/styleguide.html')
+						'post_content'		=>  $wp_filesystem->get_contents(get_template_directory() . '/client/content/styleguide.html')
 					),
 					'blog'			=> array(
 						'post_content'			=> __('This page will show all of the blog posts once you have populated your database with blog items.', 'c9-togo')
@@ -268,6 +268,5 @@ if (!function_exists('c9_client_setup')) {
 				),
 			)
 		);
-
 	}
 }
