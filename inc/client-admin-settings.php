@@ -261,16 +261,16 @@ add_action('customize_register', 'c9togo_customize_register');
 function c9_togo_custom_css_output()
 {
 
-	$c9togo_nav_mobile_menu 			= get_theme_mod('c9togo_nav_mobile_menu', '');
-	$c9togo_nav_link					= get_theme_mod('c9togo_nav_link', '');
-	$c9togo_nav_dropdown_menu 			= get_theme_mod('c9togo_nav_dropdown_menu', '');
-	$c9togo_nav_link_hover 				= get_theme_mod('c9togo_nav_link_hover', '');
-	$c9togo_nav_dropdown_link 			= get_theme_mod('c9togo_nav_dropdown_link', '');
-	$c9togo_nav_dropdown_link_hover_bg	= get_theme_mod('c9togo_nav_dropdown_link_hover_bg', '');
-	$c9togo_nav_dropdown_link_hover 	= get_theme_mod('c9togo_nav_dropdown_link_hover', '');
-	$c9togo_store_notice				= get_theme_mod('c9togo_store_notice', '');
-	$c9togo_store_notice_text			= get_theme_mod('c9togo_store_notice_text', '');
-	$c9togo_link_hover					= get_theme_mod('c9togo_link_hover', '');
+	$c9togo_nav_mobile_menu 			= esc_html(get_theme_mod('c9togo_nav_mobile_menu', ''));
+	$c9togo_nav_link					= esc_html(get_theme_mod('c9togo_nav_link', ''));
+	$c9togo_nav_dropdown_menu 			= esc_html(get_theme_mod('c9togo_nav_dropdown_menu', ''));
+	$c9togo_nav_link_hover 				= esc_html(get_theme_mod('c9togo_nav_link_hover', ''));
+	$c9togo_nav_dropdown_link 			= esc_html(get_theme_mod('c9togo_nav_dropdown_link', ''));
+	$c9togo_nav_dropdown_link_hover_bg	= esc_html(get_theme_mod('c9togo_nav_dropdown_link_hover_bg', ''));
+	$c9togo_nav_dropdown_link_hover 	= esc_html(get_theme_mod('c9togo_nav_dropdown_link_hover', ''));
+	$c9togo_store_notice				= esc_html(get_theme_mod('c9togo_store_notice', ''));
+	$c9togo_store_notice_text			= esc_html(get_theme_mod('c9togo_store_notice_text', ''));
+	$c9togo_link_hover					= esc_html(get_theme_mod('c9togo_link_hover', ''));
 
 	$c9_togo_custom_css 	= '';
 

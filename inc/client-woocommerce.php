@@ -56,13 +56,13 @@ function c9togo_add_woocommerce_icon($items, $args)
 
 		if ('primary' == $args->theme_location) {
 
-			$count = WC()->cart->get_cart_contents_count();
+			$count = esc_attr(WC()->cart->get_cart_contents_count());
 
 			//if there are items in the cart, put a number in front of the icon
 			if ($count != 0) {
-				$items .= '<li itemscope="itemscope" class="nav-woocommerce menu-item nav-item" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . wc_get_cart_url() . '" title="Shopping Cart" class="nav-link"><span class="view-cart">' . __('View Cart', 'c9-togo') . '</span> <i class="fa fa-shopping-cart fa-md"></i><span class="count">' . $count . '</span></a></li>';
+				$items .= '<li itemscope="itemscope" class="nav-woocommerce menu-item nav-item" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . esc_url(wc_get_cart_url()) . '" title="Shopping Cart" class="nav-link"><span class="view-cart">' . __('View Cart', 'c9-togo') . '</span> <i class="fa fa-shopping-cart fa-md"></i><span class="count">' . $count . '</span></a></li>';
 			} else { //if not just put in an icon
-				$items .= '<li itemscope="itemscope" class="nav-woocommerce menu-item nav-item" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . wc_get_cart_url() . '" title="Shopping Cart" class="nav-link"><span class="view-cart">' . __('View Cart', 'c9-togo') . '</span> <i class="fa fa-shopping-cart fa-md"></i></a></li>';
+				$items .= '<li itemscope="itemscope" class="nav-woocommerce menu-item nav-item" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . esc_url(wc_get_cart_url()) . '" title="Shopping Cart" class="nav-link"><span class="view-cart">' . __('View Cart', 'c9-togo') . '</span> <i class="fa fa-shopping-cart fa-md"></i></a></li>';
 			} //end count check
 
 		} //end checking active theme menu location
