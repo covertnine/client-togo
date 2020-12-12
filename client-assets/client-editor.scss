@@ -154,3 +154,7 @@ div[data-type="c9-blocks/column-container"] .editor-block-list__block-edit.block
 	margin: 0px;
 	padding: 0px;
 }
+
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"] {
+	padding-left: 25px;
+}

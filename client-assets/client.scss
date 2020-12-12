@@ -832,6 +832,7 @@ p.wp-block-subhead,
 .editor-styles-wrapper ol,
 .entry-content ol {
 	padding-left: 14px;
+	margin-left: 14px;
 }
 
 .entry-content ol li:before,
@@ -848,7 +849,7 @@ p.wp-block-subhead,
 .entry-content ul li:before,
 .editor-styles-wrapper ol li:before,
 .entry-content ol li:before {
-	margin: 0 7px 0 -27px;
+	margin: 0 0px 0 -27px;
 }
 
 .entry-content ul .dark-color-text {
@@ -1030,6 +1031,10 @@ p.wp-block-subhead,
 .c9 .entry-content .wp-block-button__link:focus {
 	color: $light;
 	white-space: nowrap;
+}
+
+.btn-back-to-top {
+	border-radius: 20px;
 }
 
 .c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:visited,
@@ -1244,14 +1249,24 @@ p.wp-block-subhead,
 .woocommerce-page.woocommerce a.button.alt,
 .woocommerce-page.woocommerce button.button.alt,
 .woocommerce-page.woocommerce input.button.alt {
-	font-weight: 400;
-	letter-spacing: 1px;
+	font-weight: 700;
+	letter-spacing: .09em;
 	color: $light;
 	background-color: $dark;
 	font-size: 12px;
 	font-family: $font-family-base;
 	padding: 7px 30px;
 	border-radius: 34px;
+}
+
+.wp-block-button a:not([href]):not([tabindex]):hover,
+.wp-block-button__link,
+.wp-block-button__link:not([href]):not([tabindex]) {
+	border-radius: 34px;
+	font-size: 12px;
+	font-family: $font-family-base;
+	font-weight: 700;
+	letter-spacing: .09em;
 }
 
 .c9 .woocommerce #respond input#submit:hover,
