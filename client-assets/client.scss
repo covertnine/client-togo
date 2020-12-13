@@ -802,7 +802,7 @@ p.wp-block-subhead,
 
 /* list items */
 .entry-content ol:not(.wp-block-gallery) li,
-.entry-content ul:not(.blocks-gallery-grid) li {
+.entry-content ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links) li {
 	margin: 10px 0px;
 	list-style: none;
 }
