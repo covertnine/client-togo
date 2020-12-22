@@ -809,7 +809,7 @@ p.wp-block-subhead,
 
 .editor-styles-wrapper ul.wp-block[data-type="core/list"] li:before,
 .editor-styles-wrapper ul.wp-block-latest-posts li:before,
-.entry-content ul:not(.blocks-gallery-grid):not(.gform_fields) li:before,
+.entry-content ul:not(.blocks-gallery-grid):not(.gform_fields):not(.wp-block-social-links) li:before,
 .wc-block-product-categories-list li:before {
 	font-size: 14px;
 	content: "\f18e";
@@ -818,8 +818,8 @@ p.wp-block-subhead,
 	margin-right: 16px;
 }
 
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields),
-.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields) {
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links),
+.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links) {
 	padding-left: 27px;
 }
 
