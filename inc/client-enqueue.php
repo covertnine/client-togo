@@ -20,7 +20,6 @@ if (!function_exists('c9togo_client_scripts')) {
 		}
 
 		wp_enqueue_style('c9togo-client-styles', get_template_directory_uri() . '/client/client-assets/dist/client.min.css', array('c9-styles'));
-		wp_enqueue_script('c9togo-client-scripts', get_template_directory_uri() . '/client/client-assets/custom-client.js', array('jquery', 'c9-scripts'), false, true);
 		wp_add_inline_style('c9togo-client-styles', c9_togo_custom_css_output());
 	}
 } // endif function_exists( 'client_scripts' ).
