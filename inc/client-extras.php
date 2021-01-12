@@ -25,14 +25,14 @@ function c9togo_nav_custom_fields($item_id, $item)
 	<input type="hidden" name="custom-menu-meta-nonce" value="<?php echo wp_create_nonce('c9togo_custom_menu_meta'); ?>" />
 
 	<div class="field-custom_menu_meta description-wide" style="margin: 5px 0;">
-		<label for="custom-menu-meta-for-<?php echo $item_id; ?>">
+		<label for="custom-menu-meta-for-<?php echo esc_attr($item_id); ?>">
 			<?php esc_html_e('Navigation Link Style', 'c9-togo'); ?>
 		</label>
 		<br />
 
-		<input type="hidden" class="nav-menu-id" value="<?php echo $item_id; ?>" />
-		<select name="c9togo_custom_menu_meta[<?php echo $item_id; ?>]" id="custom-menu-meta-for-<?php echo $item_id; ?>">
-			<option value="" <?php if ((esc_attr($c9togo_custom_menu_meta) == "") || (empty($c9togo_custom_menu_meta))) echo " selected"; ?>>Default</option>
+		<input type="hidden" class="nav-menu-id" value="<?php echo esc_attr($item_id); ?>" />
+		<select name="c9togo_custom_menu_meta[<?php echo esc_attr($item_id); ?>]" id="custom-menu-meta-for-<?php echo esc_attr($item_id); ?>">
+			<option value="" <?php if ((esc_attr($c9togo_custom_menu_meta) == "") || (empty(esc_attr($c9togo_custom_menu_meta)))) echo " selected"; ?>>Default</option>
 			<option value="c9-order-now" <?php if (esc_attr($c9togo_custom_menu_meta) == "c9-order-now") echo " selected"; ?>><?php esc_html_e("Green Button", 'c9-togo'); ?></option>
 			<option value="c9-yellow-btn" <?php if (esc_attr($c9togo_custom_menu_meta) == "c9-yellow-btn") echo " selected"; ?>><?php esc_html_e("Yellow Button", 'c9-togo'); ?></option>
 		</select>
