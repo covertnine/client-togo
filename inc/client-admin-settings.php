@@ -21,6 +21,29 @@ if (!function_exists('c9togo_customize_register')) {
 	 */
 	function c9togo_customize_register($wp_customize)
 	{
+
+
+		/* added for displaying site title and tagline */
+		// Add "display_title_and_tagline" setting for displaying the site-title & tagline.
+		$wp_customize->add_setting(
+			'c9togo_display_title_and_tagline',
+			array(
+				'capability'        => 'edit_theme_options',
+				'default'           => false,
+				'sanitize_callback' => 'c9_sanitize_checkbox',
+			)
+		);
+
+		// Add control for the "display_title_and_tagline" setting.
+		$wp_customize->add_control(
+			'c9togo_display_title_and_tagline',
+			array(
+				'type'    => 'checkbox',
+				'section' => 'title_tagline',
+				'label'   => esc_html__('Display Site Title & Tagline', 'c9-togo'),
+			)
+		);
+
 		$wp_customize->add_setting(
 			'c9togo_link_hover',
 			array(
