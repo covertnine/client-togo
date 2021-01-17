@@ -7,6 +7,7 @@
  *
  * @package c9-togo
  */
+$c9togo_wrapper_classes  = 'navbar navbar-expand-lg navbar-light';
 $c9togo_wrapper_classes .= has_custom_logo() ? ' has-logo' : '';
 $c9togo_wrapper_classes .= true === get_theme_mod('c9togo_display_title_and_tagline', false) ? ' has-title-and-tagline' : '';
 $c9togo_wrapper_classes .= has_nav_menu('primary') ? ' has-menu' : '';
@@ -17,7 +18,7 @@ $c9togo_header_class 	 = $c9togo_show_title ? 'c9-site-title' : 'screen-reader-t
 ?>
 <div id="wrapper-navbar" class="header-navbar" itemscope itemtype="http://schema.org/WebSite">
 
-	<nav class="navbar navbar-expand-lg navbar-light<?php echo esc_attr($c9togo_wrapper_classes); ?>">
+	<nav class="<?php echo esc_attr($c9togo_wrapper_classes); ?>">
 
 		<div class="container">
 			<div class="site-branding">
