@@ -29,7 +29,7 @@ if (!function_exists('c9togo_customize_register')) {
 			'c9togo_display_title_and_tagline',
 			array(
 				'capability'        => 'edit_theme_options',
-				'default'           => false,
+				'default'           => true,
 				'sanitize_callback' => 'c9_sanitize_checkbox',
 			)
 		);
