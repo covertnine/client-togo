@@ -14,7 +14,11 @@
 .entry-title a,
 a {
 	color: $link-color;
-	text-decoration: none;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+	text-decoration-thickness: 2px;
+	-webkit-text-decoration-style: dotted;
+	text-decoration-style: dotted;
 }
 
 .entry-title a {
@@ -23,12 +27,32 @@ a {
 
 .entry-title a:hover {
 	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 2px;
+}
+
+.woocommerce-store-notice a,
+p.demo_store a {
+	text-decoration-thickness: 2px;
+	text-underline-offset: 2px;
+	-webkit-text-decoration-style: dotted;
+	text-decoration-style: dotted;
+}
+
+.woocommerce-store-notice a:focus,
+p.demo_store a:focus,
+.woocommerce-store-notice a:hover,
+p.demo_store a:hover {
+	-webkit-text-decoration-style: solid;
+	text-decoration-style: solid;
 }
 
 .entry-content a:hover,
 a:hover {
 	color: $link-hover-color;
 	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 2px;
 }
 
 .site :focus {
@@ -472,27 +496,34 @@ p.wp-block-subhead,
 }
 
 #fullscreensearch .search-close {
-	width: 40px;
+	font-size: 16px;
 	height: 40px;
-	font-size: 18px;
-	padding: 0;
-	line-height: 40px;
+	width: 40px;
+	line-height: 1;
 	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid $dark;
+}
+
+#fullscreensearch .search-close:focus {
+	border: 3px solid $gray-500;
 }
 
 #fullscreensearch .search-close:hover {
 	opacity: .8;
 }
 
-#fullscreensearch .search-close:focus {
-	outline: 1px dotted $dark;
-}
-
 #fullscreensearch input[type=search]:focus,
 #fullscreensearch form .btn:focus,
-.search-close:focus {
+#fullscreensearch .search-close:focus {
 	box-shadow: 1px 1px 8px rgba(0, 0, 0, .3);
 	outline: 0;
+}
+
+#fullscreensearch input[type=search]:focus {
+	border: 3px solid rgb(151, 151, 151);
 }
 
 #fullscreensearch form .btn {
@@ -733,6 +764,8 @@ p.wp-block-subhead,
 .entry-big-header .entry-title-box .entry-meta .posted-on a,
 .entry-big-header .entry-title-box .entry-meta .author a {
 	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 2px;
 }
 
 .entry-big-header .entry-title-box .entry-meta a:hover {
@@ -1042,6 +1075,25 @@ p.wp-block-subhead,
 .c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
 .c9 .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:not([href]):not([tabindex]) {
 	color: $light;
+}
+
+.entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:focus,
+.entry-content .wp-block-button__link:focus,
+.entry-content input[type=text]:focus,
+.wp-block-button__link:focus,
+.wp-block-button__link:not([href]):not([tabindex]):focus,
+.wp-block-file__button:focus,
+.wp-block-button:focus,
+.wp-block-button__link:focus,
+.entry-content .c9-block-cta .c9-cta-button a:focus,
+.c9-block-cta .c9-cta-button a:focus,
+#fullscreensearch form .btn:focus {
+	outline: 0;
+	text-decoration: underline;
+	text-underline-offset: 4px;
+	text-decoration-thickness: 2px;
+	-webkit-text-decoration-style: dotted;
+	text-decoration-style: dotted;
 }
 
 .footer-search input[type="submit"] {
@@ -2132,6 +2184,11 @@ p.demo_store {
 .widget_nav_menu .menu-item a:hover,
 .widget_recent_entries a:hover {
 	color: $gray-700;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 2px;
+	text-decoration: underline;
+	-webkit-text-decoration-style: dotted;
+	text-decoration-style: dotted;
 }
 
 .footer-entirety .widget-title {
