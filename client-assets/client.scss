@@ -253,7 +253,11 @@ a:hover {
 }
 
 .header-navbar .nav-order:empty {
-	display: none;
+	display: none !important;
+}
+
+.header-navbar .navbar-light .navbar-toggler {
+	margin-right: 0;
 }
 
 .header-navbar .nav-order .nav-link,
