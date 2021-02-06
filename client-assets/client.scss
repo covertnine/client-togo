@@ -12,7 +12,7 @@
 .editor-styles-wrapper .block-editor-rich-text__editable a,
 .entry-content p a:not(.wp-block-button__link):not(.nav-tabs):not([class|=c9-share]):not(.c9-smooth),
 .entry-title a,
-a {
+.entry-content a {
 	color: $link-color;
 	text-decoration: underline;
 	text-underline-offset: 2px;
@@ -244,6 +244,10 @@ a:hover {
 .header-navbar .nav-order {
 	display: inline-block;
 	font-size: 2em;
+}
+
+.header-navbar .nav-order:empty {
+	display: none;
 }
 
 .header-navbar .nav-order .nav-link,
