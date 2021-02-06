@@ -9,12 +9,12 @@
  */
 $c9togo_wrapper_classes  = 'navbar navbar-expand-lg navbar-light';
 $c9togo_wrapper_classes .= has_custom_logo() ? ' has-logo' : '';
-$c9togo_wrapper_classes .= true === get_theme_mod('c9togo_display_title_and_tagline', false) ? ' has-title-and-tagline' : '';
+$c9togo_wrapper_classes .= true === get_theme_mod('c9togo_display_title_and_tagline', true) ? ' has-title-and-tagline' : '';
 $c9togo_wrapper_classes .= has_nav_menu('primary') ? ' has-menu' : '';
 $c9togo_blog_info    	 = get_bloginfo('name');
 $c9togo_description  	 = get_bloginfo('description', 'display');
-$c9togo_show_title   	 = (true === get_theme_mod('c9togo_display_title_and_tagline', false));
-$c9togo_header_class 	 = $c9togo_show_title ? 'c9-site-title' : 'screen-reader-text';
+$c9togo_show_title   	 = (true === get_theme_mod('c9togo_display_title_and_tagline', true));
+$c9togo_header_class 	 = 'c9-site-title';
 ?>
 <div id="wrapper-navbar" class="header-navbar" itemscope itemtype="http://schema.org/WebSite">
 
@@ -26,24 +26,25 @@ $c9togo_header_class 	 = $c9togo_show_title ? 'c9-site-title' : 'screen-reader-t
 
 				if (has_custom_logo()) {
 					the_custom_logo();
-				}
+				} else {
 				?>
-				<?php if ($c9togo_blog_info && get_theme_mod('c9togo_display_title_and_tagline', false) === true) : ?>
-					<?php if (is_front_page() && !is_paged()) : ?>
-						<h1 class="<?php echo esc_attr($c9togo_header_class); ?>"><?php echo esc_html($c9togo_blog_info); ?></h1>
-					<?php elseif (is_front_page() || is_home()) : ?>
-						<h1 class="<?php echo esc_attr($c9togo_header_class); ?>"><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html($c9togo_blog_info); ?></a></h1>
-					<?php else : ?>
-						<p class="<?php echo esc_attr($c9togo_header_class); ?>"><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html($c9togo_blog_info); ?></a></p>
+					<?php if ($c9togo_blog_info && get_theme_mod('c9togo_display_title_and_tagline', true) === true) : ?>
+						<?php if (is_front_page() && !is_paged()) : ?>
+							<h1 class="<?php echo esc_attr($c9togo_header_class); ?>"><?php echo esc_html($c9togo_blog_info); ?></h1>
+						<?php elseif (is_front_page() || is_home()) : ?>
+							<h1 class="<?php echo esc_attr($c9togo_header_class); ?>"><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html($c9togo_blog_info); ?></a></h1>
+						<?php else : ?>
+							<p class="<?php echo esc_attr($c9togo_header_class); ?>"><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html($c9togo_blog_info); ?></a></p>
+						<?php endif; ?>
 					<?php endif; ?>
-				<?php endif; ?>
 
-				<?php if ($c9togo_description && get_theme_mod('c9togo_display_title_and_tagline', false) === true) : ?>
-					<p class="site-description">
-						<?php echo $c9togo_description; // phpcs:ignore WordPress.Security.EscapeOutput
-						?>
-					</p>
-				<?php endif; ?>
+					<?php if ($c9togo_description && get_theme_mod('c9togo_display_title_and_tagline', true) === true) : ?>
+						<p class="site-description">
+							<?php echo esc_html($c9togo_description); // phpcs:ignore WordPress.Security.EscapeOutput
+							?>
+						</p>
+					<?php endif; ?>
+				<?php } ?>
 			</div>
 			<div class="navbar-small-buttons">
 				<div class="nav-search">
