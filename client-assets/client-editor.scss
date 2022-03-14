@@ -5,6 +5,11 @@
 
 body .editor-styles-wrapper {
 	font-family: $font-family-base;
+	padding: 0px;
+}
+
+html :where(.editor-styles-wrapper) {
+	font-size: 10px;
 }
 
 .h1,
@@ -135,6 +140,11 @@ div[data-type="c9-blocks/column-container"] .editor-block-list__block-edit.block
 
 }
 
+/* fix for caption alignments */
+:not([data-align])>.wp-block-image>figcaption {
+	display: block;
+}
+
 /* universal line height for paragraphs */
 .editor-styles-wrapper p,
 .wp-block[data-type="core/paragraph"] p,
@@ -142,6 +152,22 @@ div[data-type="c9-blocks/column-container"] .editor-block-list__block-edit.block
 .entry-content p,
 .entry-footer {
 	line-height: $line-height-base;
+}
+
+.is-root-container .wp-block-social-links.has-small-icon-size>.wp-block-social-link>button.components-button:not(.button-link):not(.is-tertiary):not(.is-secondary):not(.is-primary):not(.button):not(.edit-post-sidebar__panel-tab):not(.components-panel__body-toggle):not(.block-editor-button-block-appender):not(.has-icon):not(.has-icon.has-text):not(.is-small) {
+	font-size: 16px;
+}
+
+.is-root-container .wp-block-social-links>.wp-block-social-link>button.components-button:not(.button-link):not(.is-tertiary):not(.is-secondary):not(.is-primary):not(.button):not(.edit-post-sidebar__panel-tab):not(.components-panel__body-toggle):not(.block-editor-button-block-appender):not(.has-icon):not(.has-icon.has-text):not(.is-small) {
+	font-size: 24px;
+}
+
+.is-root-container .wp-block-social-links.has-large-icon-size>.wp-block-social-link>button.components-button:not(.button-link):not(.is-tertiary):not(.is-secondary):not(.is-primary):not(.button):not(.edit-post-sidebar__panel-tab):not(.components-panel__body-toggle):not(.block-editor-button-block-appender):not(.has-icon):not(.has-icon.has-text):not(.is-small) {
+	font-size: 36px;
+}
+
+.is-root-container .wp-block-social-links.has-huge-icon-size>.wp-block-social-link>button.components-button:not(.button-link):not(.is-tertiary):not(.is-secondary):not(.is-primary):not(.button):not(.edit-post-sidebar__panel-tab):not(.components-panel__body-toggle):not(.block-editor-button-block-appender):not(.has-icon):not(.has-icon.has-text):not(.is-small) {
+	font-size: 48px;
 }
 
 /* core block edits */
