@@ -595,7 +595,7 @@ p.wp-block-subhead,
 /* Custom Togo Colors and outline button colors */
 .is-style-outline .wp-block-button__link,
 .is-style-outline .wp-block-button__link:not([href]):not([tabindex]) {
-	border: 2px solid;
+	border: 3px solid;
 }
 
 .is-style-outline,
@@ -1094,6 +1094,11 @@ p.wp-block-subhead,
 	border-radius: 0px;
 	border-radius: 34px;
 	white-space: nowrap;
+	padding: 15px 35px;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:not([href]):not([tabindex]),
+.wp-block-button.is-style-outline .wp-block-button__link {
 	padding: 12px 35px;
 }
 
