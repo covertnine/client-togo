@@ -855,8 +855,8 @@ p.wp-block-subhead,
 	margin-right: 16px;
 }
 
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links),
-.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links) {
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links):not(.wp-block-list),
+.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links):not(.wp-block-list) {
 	padding-left: 27px;
 }
 
@@ -1180,6 +1180,11 @@ p.wp-block-subhead,
 
 .woocommerce-page .site-main {
 	margin: 0px auto;
+}
+
+.wc-block-product-categories-list,
+.wc-block-grid__products {
+	font-size: 16px;
 }
 
 .woocommerce .woocommerce-breadcrumb,
