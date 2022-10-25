@@ -4,16 +4,16 @@
 @import "_client_variables";
 
 body .editor-styles-wrapper {
-	font-family: $font-family-base;
-	padding: 0px;
+    font-family: $font-family-base;
+    padding: 0px;
 }
 
 html :where(.editor-styles-wrapper) {
-	font-size: 10px;
+    font-size: 10px;
 }
 
 html :where(.editor-styles-wrapper) p {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 .h1,
@@ -34,8 +34,8 @@ html :where(.editor-styles-wrapper) p {
 .editor-styles-wrapper h4,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6 {
-	font-weight: 700;
-	line-height: 1.1;
+    font-weight: 700;
+    line-height: 1.1;
 }
 
 .editor-styles-wrapper .c9-heading .h1,
@@ -50,12 +50,12 @@ html :where(.editor-styles-wrapper) p {
 .editor-styles-wrapper .c9-heading h4,
 .editor-styles-wrapper .c9-heading h5,
 .editor-styles-wrapper .c9-heading h6 {
-	line-height: 1.1;
+    line-height: 1.1;
 }
 
 .editor-styles-wrapper .c9-cta .c9-sh p,
 .editor-styles-wrapper .c9-heading .c9-h .text-muted {
-	font-family: $font-family-sans-serif !important;
+    font-family: $font-family-sans-serif !important;
 }
 
 .editor-styles-wrapper .mce-content-body.button,
@@ -73,19 +73,18 @@ html :where(.editor-styles-wrapper) p {
 .wp-block-button__link,
 .wp-block-button__link:not([href]):not([tabindex]),
 .wp-block-file .wp-block-file__button,
-.wp-block-file__button,
-.editor-styles-wrapper .block-editor-rich-text__editable [data-rich-text-placeholder] {
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 12px;
+.wp-block-file__button {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
 }
 
 .editor-styles-wrapper .button:hover,
 .editor-styles-wrapper .button-primary:hover,
 .editor-styles-wrapper .mce-content-body.button:hover,
 .editor-styles-wrapper .wp-block-button__link:hover {
-	opacity: 0.8;
-	color: $light;
+    opacity: 0.8;
+    color: $light;
 }
 
 .editor-styles-wrapper p,
@@ -100,23 +99,23 @@ html :where(.editor-styles-wrapper) p {
 .editor-styles-wrapper ol li,
 .editor-styles-wrapper .wp-block-pullquote,
 .editor-styles-wrapper .wp-block-pullquote blockquote p {
-	font-family: $font-family-base;
+    font-family: $font-family-base;
 }
 
 .editor-styles-wrapper .c9-cta .wp-block-button__link {
-	font-size: 12px;
+    font-size: 12px;
 }
 
 /* consider migrating this to customer-editor style in theme base */
 div[data-type="c9-blocks/column-container"] .editor-block-list__block-edit.block-editor-block-list__block-edit .c9-column-innner .wp-block[data-type="core/paragraph"]>.editor-block-list__block-edit.block-editor-block-list__block-edit {
-	margin-bottom: 15px;
-	margin-top: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 /* list item additional block styles */
 .editor-styles-wrapper .is-style-light-list li,
 .editor-styles-wrapper .is-style-light-list li a {
-	color: $light;
+    color: $light;
 }
 
 /* woocommerce */
@@ -124,34 +123,34 @@ div[data-type="c9-blocks/column-container"] .editor-block-list__block-edit.block
 .edit-post-visual-editor .editor-block-list__block .wc-block-grid__product-title,
 .editor-styles-wrapper .wc-block-grid__product-title,
 .wc-block-grid__product-title {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 .editor-styles-wrapper .wc-block-product-categories-list li:before {
-	display: none;
+    display: none;
 }
 
 .editor-styles-wrapper .wp-block[data-type^="woocommerce/"] .wc-block-grid__products .wc-block-grid__product a:not(.wp-block-button__link) {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 /* image block captions */
 @media only screen and (min-width: 1px) {
 
-	.editor-styles-wrapper .wp-block-image figcaption,
-	.editor-styles-wrapper .wp-block-image .aligncenter>figcaption,
-	.editor-styles-wrapper .wp-block-image .alignleft>figcaption,
-	.editor-styles-wrapper .wp-block-image .alignright>figcaption,
-	.editor-styles-wrapper .wp-block-image.is-resized>figcaption {
-		font-size: 14px;
-		font-weight: 700;
-	}
+    .editor-styles-wrapper .wp-block-image figcaption,
+    .editor-styles-wrapper .wp-block-image .aligncenter>figcaption,
+    .editor-styles-wrapper .wp-block-image .alignleft>figcaption,
+    .editor-styles-wrapper .wp-block-image .alignright>figcaption,
+    .editor-styles-wrapper .wp-block-image.is-resized>figcaption {
+        font-size: 14px;
+        font-weight: 700;
+    }
 
 }
 
 /* fix for caption alignments */
 :not([data-align])>.wp-block-image>figcaption {
-	display: block;
+    display: block;
 }
 
 /* universal line height for paragraphs */
@@ -160,38 +159,38 @@ div[data-type="c9-blocks/column-container"] .editor-block-list__block-edit.block
 .c9 dl,
 .entry-content p,
 .entry-footer {
-	line-height: $line-height-base;
+    line-height: $line-height-base;
 }
 
 .is-root-container .wp-block-social-links.has-small-icon-size>.wp-block-social-link>button.components-button:not(.button-link):not(.is-tertiary):not(.is-secondary):not(.is-primary):not(.button):not(.edit-post-sidebar__panel-tab):not(.components-panel__body-toggle):not(.block-editor-button-block-appender):not(.has-icon):not(.has-icon.has-text):not(.is-small) {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 .is-root-container .wp-block-social-links>.wp-block-social-link>button.components-button:not(.button-link):not(.is-tertiary):not(.is-secondary):not(.is-primary):not(.button):not(.edit-post-sidebar__panel-tab):not(.components-panel__body-toggle):not(.block-editor-button-block-appender):not(.has-icon):not(.has-icon.has-text):not(.is-small) {
-	font-size: 24px;
+    font-size: 24px;
 }
 
 .is-root-container .wp-block-social-links.has-large-icon-size>.wp-block-social-link>button.components-button:not(.button-link):not(.is-tertiary):not(.is-secondary):not(.is-primary):not(.button):not(.edit-post-sidebar__panel-tab):not(.components-panel__body-toggle):not(.block-editor-button-block-appender):not(.has-icon):not(.has-icon.has-text):not(.is-small) {
-	font-size: 36px;
+    font-size: 36px;
 }
 
 .is-root-container .wp-block-social-links.has-huge-icon-size>.wp-block-social-link>button.components-button:not(.button-link):not(.is-tertiary):not(.is-secondary):not(.is-primary):not(.button):not(.edit-post-sidebar__panel-tab):not(.components-panel__body-toggle):not(.block-editor-button-block-appender):not(.has-icon):not(.has-icon.has-text):not(.is-small) {
-	font-size: 48px;
+    font-size: 48px;
 }
 
 /* core block edits */
 .wp-block-buttons:not(.is-selected)>.block-editor-inner-blocks .block-list-appender:last-child {
-	display: none;
+    display: none;
 }
 
 /* c9 core block toggles */
 .block-editor-block-list__layout .block-editor-block-list__block[data-type="c9-blocks/toggles"] {
-	margin: 0px;
-	padding: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"]:not(.wp-block-list),
 .is-root-container>ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields):not(.wp-block-social-links):not(.wp-block-list) {
-	padding-left: 25px;
-	margin: 30px 0 30px 15px;
+    padding-left: 25px;
+    margin: 30px 0 30px 15px;
 }
