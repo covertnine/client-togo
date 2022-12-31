@@ -140,7 +140,7 @@ a:hover {
 .header-navbar .nav .nav-link .fa-shopping-cart,
 .header-navbar .navbar-toggler,
 .header-navbar .nav-search .btn-nav-search {
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .header-navbar .navbar .nav .dropdown-toggle::after {
@@ -152,7 +152,7 @@ a:hover {
     width: auto;
     height: 14px;
     vertical-align: 0;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .header-navbar .nav-item {
@@ -182,13 +182,13 @@ a:hover {
 }
 
 .header-navbar .navbar .nav .search .nav-search a {
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .header-navbar .dropdown-item,
 .header-navbar .nav-link {
     color: $dark;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-family: $font-family-sans-serif;
     text-transform: none;
     position: relative;
@@ -500,7 +500,7 @@ p.wp-block-subhead,
 }
 
 #fullscreensearch .search-close {
-    font-size: 16px;
+    font-size: 1.6rem;
     height: 40px;
     width: 40px;
     line-height: 1;
@@ -533,7 +533,7 @@ p.wp-block-subhead,
 #fullscreensearch form .btn {
     font-family: $font-family-base;
     padding: 16px 55px;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     border-radius: 34px;
     margin-top: 20px;
 }
@@ -688,7 +688,7 @@ p.wp-block-subhead,
 }
 
 .entry-footer .cat-links {
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .entry-footer .cat-links,
@@ -802,7 +802,7 @@ p.wp-block-subhead,
     text-transform: capitalize;
     letter-spacing: 0;
     font-weight: $font-weight-bold;
-    font-size: 16px;
+    font-size: 1.6rem;
     border-radius: 34px;
 }
 
@@ -848,7 +848,7 @@ p.wp-block-subhead,
 .editor-styles-wrapper ul.wp-block-latest-posts li:before,
 .entry-content ul:not(.blocks-gallery-grid):not(.gform_fields):not(.wp-block-social-links) li:before,
 .wc-block-product-categories-list li:before {
-    font-size: 14px;
+    font-size: 1.4rem;
     content: "\f18e";
     font-family: fontawesome;
     position: relative;
@@ -956,7 +956,7 @@ p.wp-block-subhead,
     .wp-block-image .alignleft>figcaption,
     .wp-block-image .alignright>figcaption,
     .wp-block-image.is-resized>figcaption {
-        font-size: 14px;
+        font-size: 1.4rem;
         font-weight: 700;
     }
 }
@@ -1184,16 +1184,16 @@ p.wp-block-subhead,
 
 .wc-block-product-categories-list,
 .wc-block-grid__products {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .woocommerce .c9 form label {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
 #product-addons-total {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .wc-block-grid__product-title,
@@ -1221,7 +1221,7 @@ p.wp-block-subhead,
 .post-page-numbers,
 .single .navigation .nav-next a,
 .single .navigation .nav-previous a {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .single_variation_wrap .wc-pao-addon-name {
@@ -1434,7 +1434,7 @@ p.wp-block-subhead,
     min-width: 115px;
     text-align: center;
     margin: 5px;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 .woocommerce table.my_account_orders .button.pay {
@@ -1663,7 +1663,7 @@ p.wp-block-subhead,
     padding: 2px 8px;
     border: 1px solid $gray-500;
     line-height: 1;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 /* woocommerce login form */
@@ -1782,7 +1782,7 @@ p.wp-block-subhead,
 .ui-datepicker-calendar,
 .ui-datepicker .ui-datepicker-title {
     font-family: $font-family-base;
-    font-size: 1.6em !important;
+    font-size: 1.6rem !important;
 }
 
 .ui-datepicker .ui-datepicker-title {
@@ -1851,7 +1851,7 @@ li.ui-timepicker-selected,
 }
 
 .c9 .woocommerce .shop_table .product-name a {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
     text-decoration: none;
     color: $primary;
@@ -1859,7 +1859,7 @@ li.ui-timepicker-selected,
 
 .shop_table .cart_item .product-name,
 .shop_table .variation dt {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .editor-styles-wrapper table.shop_table tbody tr td,
@@ -1953,7 +1953,7 @@ ul.order_details li {
 }
 
 .woocommerce ul.order_details li strong {
-    font-size: 16px !important;
+    font-size: 1.6rem !important;
 }
 
 .order_details:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields) li {
@@ -1996,7 +1996,7 @@ p.demo_store {
 }
 
 .woocommerce .woocommerce-product-details__short-description {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     line-height: 1.7;
 }
 
@@ -2017,7 +2017,7 @@ p.demo_store {
 }
 
 .single-product.woocommerce .woocommerce-breadcrumb {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     line-height: 1.6;
     text-transform: uppercase;
     color: $gray-900;
@@ -2038,7 +2038,7 @@ p.demo_store {
 
 @media only screen and (max-width: 568px) {
     .single-product.woocommerce .woocommerce-breadcrumb {
-        font-size: 1.8em;
+        font-size: 1.8rem;
     }
 }
 
@@ -2061,7 +2061,7 @@ p.demo_store {
 }
 
 .single-product.woocommerce div.product .product_title {
-    font-size: 5em;
+    font-size: 5rem;
 }
 
 .single-product .tabs.wc-tabs,
@@ -2157,7 +2157,7 @@ p.demo_store {
 }
 
 .footer-entirety .footer-widget {
-    font-size: 1.4em;
+    font-size: 1.4rem;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -2194,7 +2194,7 @@ p.demo_store {
 }
 
 .footer-entirety .widget-title {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 900;
 }
 
