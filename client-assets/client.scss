@@ -1183,7 +1183,8 @@ p.wp-block-subhead,
 }
 
 .woocommerce .c9 form label {
-    font-size: 1.6rem;    font-weight: bold;
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 
 #product-addons-total {
@@ -1627,6 +1628,7 @@ p.wp-block-subhead,
 
 .c9 .woocommerce div.product form.cart .variations select,
 .wc-block-product-categories select {
+    appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
     border-radius: 0;
