@@ -240,7 +240,7 @@ a:hover {
 
 .header-navbar .nav-order {
     display: inline-block;
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 .header-navbar .nav-order:empty {
@@ -451,7 +451,7 @@ a:hover {
 .single-post .c9 h1 {
     text-transform: none;
     font-weight: 700;
-    font-size: 2.8em;
+    font-size: 2.8rem;
 }
 
 p.wp-block-subhead,
@@ -706,7 +706,7 @@ p.wp-block-subhead,
     text-decoration: none;
     text-transform: uppercase;
     color: $gray-900;
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 .tags-links a {
@@ -756,7 +756,7 @@ p.wp-block-subhead,
 .entry-big-header .entry-title-box .entry-meta .posted-on a,
 .entry-big-header .entry-title-box .entry-meta .byline,
 .entry-big-header .entry-title-box .entry-meta .author a {
-    font-size: 12px;
+    font-size: 1.2rem;
     color: $light;
 }
 
@@ -1055,7 +1055,7 @@ p.wp-block-subhead,
     font-weight: 700;
     font-family: $font-family-base;
     letter-spacing: .09em;
-    font-size: 12px;
+    font-size: 1.2rem;
     text-decoration: none;
     border-radius: 0px;
     border-radius: 34px;
@@ -1105,7 +1105,7 @@ p.wp-block-subhead,
 }
 
 .footer-search input[type="submit"] {
-    font-size: 10px;
+    font-size: 1rem;
 }
 
 .error404 #searchsubmit {
@@ -1133,7 +1133,7 @@ p.wp-block-subhead,
     .wp-block-button:not(.is-style-outline) .wp-block-button__link.mce-content-body,
     .wp-block-file__button,
     .wp-block-file .wp-block-file__button {
-        font-size: 10px;
+        font-size: 1rem;
         letter-spacing: 1px;
         padding: 8px 15px;
     }
@@ -1182,14 +1182,8 @@ p.wp-block-subhead,
     margin: 0px auto;
 }
 
-.wc-block-product-categories-list,
-.wc-block-grid__products {
-    font-size: 1.6rem;
-}
-
 .woocommerce .c9 form label {
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-size: 1.6rem;    font-weight: bold;
 }
 
 #product-addons-total {
@@ -1278,7 +1272,7 @@ p.wp-block-subhead,
 
 .c9 .wc-block-grid__product-add-to-cart .added_to_cart {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -1313,7 +1307,7 @@ p.wp-block-subhead,
     letter-spacing: .09em;
     color: $light;
     background-color: $dark;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-family: $font-family-base;
     padding: 7px 30px;
     border-radius: 34px;
@@ -1323,7 +1317,7 @@ p.wp-block-subhead,
 .wp-block-button__link,
 .wp-block-button__link:not([href]):not([tabindex]) {
     border-radius: 34px;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-family: $font-family-base;
     font-weight: 700;
     letter-spacing: .09em;
@@ -1347,7 +1341,7 @@ p.wp-block-subhead,
     padding: 7px 30px;
     letter-spacing: 1px;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-family: $font-family-base;
     text-transform: uppercase;
     white-space: nowrap;
@@ -1382,7 +1376,7 @@ p.wp-block-subhead,
     background-color: $success;
     padding: 16px 33px;
     transition: background-color .4s ease-out;
-    font-size: 12px;
+    font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -1729,7 +1723,7 @@ p.wp-block-subhead,
 .woocommerce form .form-row .byconsolewooodt_ordertype_label {
     margin: 5px;
     border-radius: 34px;
-    font-size: 12px;
+    font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: bold;
     font-family: $headings-font-family;
@@ -1847,7 +1841,7 @@ li.ui-timepicker-selected,
 
 .c9 .woocommerce table.shop_table {
     border: 0px;
-    font-size: 10px;
+    font-size: 1rem;
 }
 
 .c9 .woocommerce .shop_table .product-name a {
@@ -1949,7 +1943,7 @@ li.ui-timepicker-selected,
 
 /* order confirmation */
 ul.order_details li {
-    font-size: 14px !important;
+    font-size: 1.4rem !important;
 }
 
 .woocommerce ul.order_details li strong {
