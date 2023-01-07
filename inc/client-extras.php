@@ -90,3 +90,5 @@ function c9togo_custom_menu_class($classes, $item)
 	return $classes;
 }
 add_filter('nav_menu_css_class', 'c9togo_custom_menu_class', 10, 4);
+
+remove_action( 'admin_notices', 'byconsolewooodt_free_plugin_admin_notice_error' );
