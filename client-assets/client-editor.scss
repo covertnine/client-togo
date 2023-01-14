@@ -73,8 +73,7 @@ body .editor-styles-wrapper {
 .wp-block-button__link,
 .wp-block-button__link:not([href]):not([tabindex]),
 .wp-block-file .wp-block-file__button,
-.wp-block-file__button,
-.editor-styles-wrapper .block-editor-rich-text__editable [data-rich-text-placeholder] {
+.wp-block-file__button {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.2rem;
@@ -136,7 +135,7 @@ div[data-type="c9-blocks/column-container"] .editor-block-list__block-edit.block
     .editor-styles-wrapper .wp-block-image .alignleft>figcaption,
     .editor-styles-wrapper .wp-block-image .alignright>figcaption,
     .editor-styles-wrapper .wp-block-image.is-resized>figcaption {
-        font-size:1.4rem;
+        font-size: 1.4rem;
         font-weight: 700;
     }
 
