@@ -1029,6 +1029,11 @@ p.wp-block-subhead,
     background-color: $dark;
 }
 
+mark.has-inline-color,
+.mark.has-inline-color {
+    background-color: inherit;
+}
+
 .has-covertnine-palette-1-background-color {
     background-color: $light;
 }
