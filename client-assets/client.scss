@@ -413,7 +413,7 @@ a:hover {
 }
 
 /****************************************************************************************/
-/* typography*/
+/* typography */
 /****************************************************************************************/
 
 .h1,
@@ -542,128 +542,6 @@ p.wp-block-subhead,
     font-family: $headings-font-family !important;
 }
 
-.entry-content .c9-grid-has-background .has-text-color a {
-    color: $light !important;
-}
-
-.entry-content .c9-grid-has-background .has-text-color a:hover {
-    color: $primary !important;
-}
-
-
-.entry-content .has-covertnine-palette-1-color a {
-    color: $light;
-}
-
-.entry-content .has-covertnine-palette-1-color a:hover {
-    color: $gray-500;
-}
-
-/* Custom Togo Colors and outline button colors */
-.is-style-outline .wp-block-button__link,
-.is-style-outline .wp-block-button__link:not([href]):not([tabindex]) {
-    border: 3px solid;
-}
-
-.is-style-outline,
-.is-style-outline .has-text-color {
-    background-color: transparent !important;
-}
-
-.is-style-outline .wp-block-button__link,
-.is-style-outline .wp-block-button__link:not([href]):not([tabindex]) {
-    background-color: inherit !important;
-}
-
-.is-style-outline .has-color-faded-green-color,
-.color-faded-green {
-    color: #7adcb4 !important;
-}
-
-.has-color-faded-green-background-coolor {
-    background-color: #7adcb4 !important;
-}
-
-.is-style-outline .has-color-green-color,
-.has-color-green-color {
-    color: $primary !important;
-}
-
-.has-color-green-background-color {
-    background-color: $primary !important;
-}
-
-.is-style-outline .has-color-yellow-color,
-.has-color-yellow-color {
-    color: #ffe605 !important;
-}
-
-.has-color-yellow-background-color {
-    background-color: #ffe605 !important;
-}
-
-.is-style-outline .has-color-light-gray-color,
-.has-color-light-gray-color {
-    color: #b0b0b0 !important;
-}
-
-.has-color-light-gray-background-color {
-    background-color: #b0b0b0 !important;
-}
-
-.is-style-outline .has-color-dark-gray-color,
-.has-color-dark-gray-color {
-    color: #242424 !important;
-}
-
-.has-color-dark-gray-background-color {
-    background-color: #242424 !important;
-}
-
-.is-style-outline .has-color-white-color,
-.has-color-white-color {
-    color: $light !important;
-}
-
-.has-color-white-background-color {
-    background-color: $light !important;
-}
-
-.is-style-outline .has-color-orange-color,
-.has-color-orange-color {
-    color: #ffb442 !important;
-}
-
-.has-color-orange-background-color {
-    background-color: #ffb442 !important;
-}
-
-.is-style-outline .has-color-alt-green-color,
-.has-color-alt-green-color {
-    color: #00ff8c !important;
-}
-
-.has-color-alt-green-background-color {
-    background-color: #00ff8c !important;
-}
-
-.is-style-outline .has-color-blue-color,
-.has-color-blue-color {
-    color: #2e46d3 !important;
-}
-
-.has-color-blue-background-color {
-    background-color: #2e46d3 !important;
-}
-
-.is-style-outline .has-color-black-color,
-.has-color-black-color {
-    color: $dark !important;
-}
-
-.has-color-black-background-color {
-    background-color: $dark !important;
-}
 
 /****************************************************************************************/
 /* post navigation, tags, categories, on single posts */
@@ -985,9 +863,47 @@ p.wp-block-subhead,
     color: $gray-900;
 }
 
+
+.entry-content .c9-grid-has-background .has-text-color a {
+    color: $light !important;
+}
+
+.entry-content .c9-grid-has-background .has-text-color a:hover {
+    color: $primary !important;
+}
+
+.entry-content .has-covertnine-palette-1-color a {
+    color: $light;
+}
+
+.entry-content .has-covertnine-palette-1-color a:hover {
+    color: $gray-500;
+}
+
+/* Custom Togo Colors and outline button colors */
+.is-style-outline .wp-block-button__link,
+.is-style-outline .wp-block-button__link:not([href]):not([tabindex]) {
+    border: 3px solid;
+}
+
+.is-style-outline,
+.is-style-outline .has-text-color {
+    background-color: transparent !important;
+}
+
+.is-style-outline .wp-block-button__link,
+.is-style-outline .wp-block-button__link:not([href]):not([tabindex]) {
+    background-color: inherit !important;
+}
+
+/**********/
+
+
+/****************************************************************/
 .has-color-red-color,
 .has-color-primary-color,
-.has-color-green-color {
+.has-color-green-color,
+.is-style-outline .has-color-green-color {
     color: $primary !important;
 }
 
@@ -1007,34 +923,50 @@ p.wp-block-subhead,
     color: $danger !important;
 }
 
-.has-color-white-color {
+.is-style-outline .has-color-white-color,
+.has-color-white-color,
+.has-color-light-color {
     color: $light !important;
 }
 
-.has-color-black-color {
+.has-color-black-color,
+.is-style-outline .has-color-black-color,
+.has-color-dark-color {
     color: $dark !important;
 }
 
-.has-color-yellow-color {
+.has-color-yellow-color,
+.is-style-outline .has-color-yellow-color {
     color: #ffe605 !important;
 }
 
-.has-color-faded-green {
+.has-color-faded-green,
+.is-style-outline .has-color-faded-green-color,
+.color-faded-green {
     color: #7adcb4 !important;
 }
 
-.has-color-dark-gray-color {
+.has-color-dark-gray-color,
+.is-style-outline .has-color-dark-gray-color {
     color: #242424 !important;
 }
 
+.is-style-outline .has-color-light-gray-color,
+.has-color-light-gray-color {
+    color: #b0b0b0 !important;
+}
+
+.is-style-outline .has-color-orange-color,
 .has-color-orange-color {
     color: #ffb442 !important;
 }
 
+.is-style-outline .has-color-alt-green-color,
 .has-color-alt-green-color {
     color: #00ff8c !important;
 }
 
+.is-style-outline .has-color-blue-color,
 .has-color-blue-color {
     color: #2e46d3 !important;
 }
@@ -1043,32 +975,66 @@ p.wp-block-subhead,
     color: $gray-900 !important;
 }
 
-.bg-primary {
-    background-color: $primary;
+.bg-primary,
+.has-color-green-background-color {
+    background-color: $primary !important;
 }
 
 .bg-secondary {
-    background-color: $secondary;
+    background-color: $secondary !important;
 }
 
 .bg-success {
-    background-color: $success;
+    background-color: $success !important;
 }
 
 .bg-info {
-    background-color: $info;
+    background-color: $info !important;
 }
 
 .bg-warning {
-    background-color: $warning;
+    background-color: $warning !important;
 }
 
 .bg-danger {
-    background-color: $danger;
+    background-color: $danger !important;
 }
 
-.bg-dark {
-    background-color: $dark;
+.bg-dark,
+.has-color-black-background-color {
+    background-color: $dark !important;
+}
+
+.has-color-white-background-color {
+    background-color: $light !important;
+}
+
+.has-color-blue-background-color {
+    background-color: #2e46d3 !important;
+}
+
+.has-color-orange-background-color {
+    background-color: #ffb442 !important;
+}
+
+.has-color-alt-green-background-color {
+    background-color: #00ff8c !important;
+}
+
+.has-color-light-gray-background-color {
+    background-color: #b0b0b0 !important;
+}
+
+.has-color-dark-gray-background-color {
+    background-color: #242424 !important;
+}
+
+.has-color-faded-green-background-color {
+    background-color: #7adcb4 !important;
+}
+
+.has-color-yellow-background-color {
+    background-color: #ffe605 !important;
 }
 
 mark.has-inline-color,
@@ -1077,7 +1043,7 @@ mark.has-inline-color,
 }
 
 .has-covertnine-palette-1-background-color {
-    background-color: $light;
+    background-color: $light !important;
 }
 
 /****************************************************************************************/

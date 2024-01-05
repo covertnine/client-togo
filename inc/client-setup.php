@@ -142,8 +142,6 @@ function c9starter_register_block_patterns()
 		$image_path_5 = $theme_directory_uri . '/client/client-assets/img/chicken-wings-1024x683.jpg';
 		$image_path_6 = $theme_directory_uri . '/client/client-assets/img/tacos-1024x683.jpg';
 		$image_path_7 = $theme_directory_uri . '/client/client-assets/img/burger-sausauge-fries-msutard.jpg';
-		$image_path_8 = $theme_directory_uri . '/client/client-assets/img/chips-guac-salsa.jpg';
-		$image_path_9 = $theme_directory_uri . '/client/client-assets/img/chips-queso.jpg';
 		$video_path_1 = $theme_directory_uri . '/client/client-assets/img/c9-starter-templates-clip.mp4';
 		$logo_path = $theme_directory_uri . '/client/client-assets/img/feather-logo-gradient-rb.svg';
 		$audio_path_1 = $theme_directory_uri . '/client/client-assets/audio/pew-pew.m4a';
@@ -169,13 +167,13 @@ function c9starter_register_block_patterns()
 <div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<!-- wp:buttons {"align":"center"} -->
-<div class="wp-block-buttons aligncenter"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link">Get Notifications</a></div>
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-c9-btn-green"} -->
+<div class="wp-block-button is-style-c9-btn-green"><a class="wp-block-button__link wp-element-button">Get Notifications</a></div>
 <!-- /wp:button -->
 
-<!-- wp:button {"textColor":"color-light","className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-color-light-color has-text-color">Learn More</a></div>
+<!-- wp:button {"textColor":"color-white","className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-color-white-color has-text-color wp-element-button">Learn More</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div></div>
 <!-- /wp:cover -->';
@@ -229,10 +227,10 @@ https://open.spotify.com/album/4wNkTCWvNYJr8BL4obFo3y?si=YyBupJfnSi2lGBg_71TvGQ
 		);
 
 		$c9_podcast_embed_core = '<!-- wp:columns {"style":{"color":{"background":"#f3f3f3"}}} -->
-<div class="wp-block-columns has-background" style="background-color:#f3f3f3"><!-- wp:column {"verticalAlignment":"center","width":"70%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:70%"><!-- wp:group -->
+<div class="wp-block-columns has-background" style="background-color:#f3f3f3"><!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:group -->
 <div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:heading {"textAlign":"center","level":1,"fontSize":"large"} -->
-<h1 class="has-text-align-center has-large-font-size">♫ Episode 919 ♫<br><span class="has-inline-color has-c-9-music-mint-green-color">Don\'t listen to Pew-Pew.m4a</span></h1>
+<h1 class="has-text-align-center has-large-font-size">♫ Episode 919 ♫<br><span class="has-inline-color has-color-green-color">Don\'t listen to Pew-Pew.m4a</span></h1>
 <!-- /wp:heading -->
 
 <!-- wp:separator -->
@@ -244,15 +242,15 @@ https://open.spotify.com/album/4wNkTCWvNYJr8BL4obFo3y?si=YyBupJfnSi2lGBg_71TvGQ
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p><strong><strong><span class="has-inline-color has-c-9-music-mint-green-color">✓</span></strong> Song Name</strong> - Track Title</p>
+<p><strong><strong><span class="has-inline-color has-color-primary-color">✓</span></strong> Song Name</strong> - Track Title</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p><strong><span class="has-inline-color has-c-9-music-mint-green-color">✓</span> Song Name</strong> - Track Title</p>
+<p><strong><span class="has-inline-color has-color-primary-color">✓</span> Song Name</strong> - Track Title</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p><strong><span class="has-inline-color has-c-9-music-mint-green-color">✓</span> Song Name</strong> - Track Title</p>
+<p><strong><span class="has-inline-color has-color-primary-color">✓</span> Song Name</strong> - Track Title</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center"} -->
@@ -293,10 +291,10 @@ https://open.spotify.com/album/4wNkTCWvNYJr8BL4obFo3y?si=YyBupJfnSi2lGBg_71TvGQ
 			),
 		);
 
-		$c9_events_schedule_core = '<!-- wp:cover {"url":"' . esc_url($image_path_2) . '","id":1895,"overlayColor":"c9music-black","focalPoint":{"x":"0.49","y":"0.67"},"minHeight":849,"minHeightUnit":"px","contentPosition":"bottom center","align":"full"} -->
-<div class="wp-block-cover alignfull has-c-9-music-black-background-color has-background-dim has-custom-content-position is-position-bottom-center" style="background-image:url(' . esc_url($image_path_2) . ');min-height:849px;background-position:49% 67%"><div class="wp-block-cover__inner-container"><!-- wp:columns {"verticalAlignment":null} -->
-<div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:image {"id":1955,"width":51,"height":38,"sizeSlug":"large","linkDestination":"none"} -->
+		$c9_events_schedule_core = '<!-- wp:cover {"url":"' . esc_url($image_path_2) . '","id":1895,"overlayColor":"color-black","focalPoint":{"x":"0.49","y":"0.67"},"minHeight":849,"minHeightUnit":"px","contentPosition":"bottom center","align":"full"} -->
+<div class="wp-block-cover alignfull has-color-black-background-color has-background-dim has-custom-content-position is-position-bottom-center" style="background-image:url(' . esc_url($image_path_2) . ');min-height:849px;background-position:49% 67%"><div class="wp-block-cover__inner-container"><!-- wp:columns {"verticalAlignment":null} -->
+<div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","width":"66.66%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:66.66%"><!-- wp:image {"id":1955,"width":51,"height":38,"sizeSlug":"large","linkDestination":"none"} -->
 <figure class="wp-block-image size-large aligncenter is-resized"><img src="' . esc_url($logo_path) . '" alt="" class="wp-image-1955" width="51" height="38"/></figure>
 <!-- /wp:image -->
 
@@ -309,8 +307,8 @@ https://open.spotify.com/album/4wNkTCWvNYJr8BL4obFo3y?si=YyBupJfnSi2lGBg_71TvGQ
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"width":"50%"} -->
-<div class="wp-block-column" style="flex-basis:50%"><!-- wp:embed {"url":"https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw","type":"rich","providerNameSlug":"spotify","allowResponsive":false,"responsive":true,"className":""} -->
+<!-- wp:column {"width":"33.33%"} -->
+<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:embed {"url":"https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw","type":"rich","providerNameSlug":"spotify","allowResponsive":false,"responsive":true,"className":""} -->
 <figure class="wp-block-embed is-type-rich is-provider-spotify wp-block-embed-spotify"><div class="wp-block-embed__wrapper">
 https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw
 </div></figure>
@@ -327,7 +325,7 @@ https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw
 <div class="wp-block-group has-background" style="background-color:#f7f7f7"><div class="wp-block-group__inner-container"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"width":"70%"} -->
 <div class="wp-block-column" style="flex-basis:70%"><!-- wp:heading {"level":1,"style":{"typography":{"fontSize":35}}} -->
-<h1 style="font-size:35px"><strong><span class="has-inline-color has-c-9-music-red-color">C9</span></strong> — Events Block Pattern</h1>
+<h1 class="wp-block-heading" style="font-size:35px"><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-green-color">C9</mark></strong> — Events Block Pattern</h1>
 <!-- /wp:heading -->
 
 <!-- wp:spacer {"height":23} -->
@@ -414,8 +412,8 @@ https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw
 <p><strong>Author Name</strong><br>Author Title</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":6,"textColor":"c9music-black"} -->
-<h6 class="has-c-9-music-black-color has-text-color">December 16th, 2084</h6>
+<!-- wp:heading {"level":6,"textColor":"color-black"} -->
+<h6 class="has-color-black-color has-text-color">December 16th, 2084</h6>
 <!-- /wp:heading -->
 
 <!-- wp:separator -->
@@ -555,8 +553,8 @@ https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw
 <p><strong>Author Name</strong><br>Author Title</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":6,"textColor":"c9music-black"} -->
-<h6 class="has-c-9-music-black-color has-text-color">December 16th, 2084</h6>
+<!-- wp:heading {"level":6,"textColor":"color-black"} -->
+<h6 class="has-color-black-color has-text-color">December 16th, 2084</h6>
 <!-- /wp:heading -->
 
 <!-- wp:separator -->
@@ -857,7 +855,7 @@ https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw
 <!-- /wp:heading -->
 
 <!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="wp-block-heading has-text-align-center has-c-9-music-faded-red-color has-text-color"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-gray-color">Heading One</mark></h1>
+<h1 class="wp-block-heading has-text-align-center has-has-color-primary-color has-text-color"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-gray-color">Heading One</mark></h1>
 <!-- /wp:heading -->
 
 <!-- wp:heading {"textAlign":"center","level":2} -->
