@@ -985,8 +985,26 @@ p.wp-block-subhead,
     color: $gray-900;
 }
 
-.has-color-red-color {
+.has-color-red-color,
+.has-color-primary-color,
+.has-color-green-color {
     color: $primary !important;
+}
+
+.has-color-secondary-color {
+    color: $secondary !important;
+}
+
+.has-color-success-color {
+    color: $success !important;
+}
+
+.has-color-warning-color {
+    color: $warning !important;
+}
+
+.has-color-danger-color {
+    color: $danger !important;
 }
 
 .has-color-white-color {
@@ -995,6 +1013,30 @@ p.wp-block-subhead,
 
 .has-color-black-color {
     color: $dark !important;
+}
+
+.has-color-yellow-color {
+    color: #ffe605 !important;
+}
+
+.has-color-faded-green {
+    color: #7adcb4 !important;
+}
+
+.has-color-dark-gray-color {
+    color: #242424 !important;
+}
+
+.has-color-orange-color {
+    color: #ffb442 !important;
+}
+
+.has-color-alt-green-color {
+    color: #00ff8c !important;
+}
+
+.has-color-blue-color {
+    color: #2e46d3 !important;
 }
 
 .has-color-gray-color {
