@@ -650,29 +650,29 @@ https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw
 			),
 		);
 
-		$c9_watch_video_core = '<!-- wp:cover {"url":"' . esc_url($video_path_1) . '","id":3697,"dimRatio":80,"overlayColor":"color-primary","backgroundType":"video","minHeight":995,"minHeightUnit":"px","align":"full"} -->
-		<div class="wp-block-cover alignfull has-background-dim-80 has-color-primary-background-color has-background-dim" style="min-height:995px"><video class="wp-block-cover__video-background" autoplay muted loop playsinline src="' . esc_url($video_path_1) . '"></video><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"color":{"background":"#ededed"}}} -->
-		<div class="wp-block-group has-background" style="background-color:#ededed"><div class="wp-block-group__inner-container"><!-- wp:image {"align":"center","id":3798,"width":51,"height":38,"sizeSlug":"large","linkDestination":"none"} -->
-		<div class="wp-block-image"><figure class="aligncenter size-large is-resized"><img src="' . esc_url($logo_path) . '" alt="" class="wp-image-3798" width="51" height="38"/></figure></div>
+		$c9_watch_video_core = '<!-- wp:cover {"url":"' . esc_url($video_path_1) . '","id":3697,"dimRatio":80,"overlayColor":"color-primary","backgroundType":"video","minHeight":995,"minHeightUnit":"px","align":"full","className":"is-light","layout":{"type":"constrained"},"c9ContainerWidth":""} -->
+		<div class="wp-block-cover alignfull is-light" style="min-height:995px"><span aria-hidden="true" class="wp-block-cover__background has-color-primary-background-color has-background-dim-80 has-background-dim"></span><video class="wp-block-cover__video-background intrinsic-ignore" autoplay muted loop playsinline src="' . esc_url($video_path_1) . '" data-object-fit="cover"></video><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"color":{"background":"#ededed"}}} -->
+		<div class="wp-block-group has-background" style="background-color:#ededed"><!-- wp:image {"align":"center","id":3798,"width":"64px","height":"auto","aspectRatio":"1","sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
+		<figure class="wp-block-image aligncenter size-large is-resized"><img src="' . esc_url($logo_path) . '" alt="" class="wp-image-3798" style="aspect-ratio:1;width:64px;height:auto"/></figure>
 		<!-- /wp:image -->
 		
 		<!-- wp:heading {"textAlign":"center","level":1,"style":{"color":{"text":"#222222"}}} -->
-		<h1 class="has-text-align-center has-text-color" style="color:#222222">Watch the video to learn more.</h1>
+		<h1 class="wp-block-heading has-text-align-center has-text-color" style="color:#222222">Watch the video to learn more.</h1>
 		<!-- /wp:heading -->
 		
 		<!-- wp:paragraph {"align":"center","textColor":"color-primary","fontSize":"small"} -->
 		<p class="has-text-align-center has-color-primary-color has-text-color has-small-font-size">Watch the video below to learn how to build page templates with C9 Blocks</p>
 		<!-- /wp:paragraph -->
 		
-		<!-- wp:spacer {"height":29} -->
+		<!-- wp:spacer {"height":"29px"} -->
 		<div style="height:29px" aria-hidden="true" class="wp-block-spacer"></div>
 		<!-- /wp:spacer -->
 		
-		<!-- wp:buttons {"align":"center"} -->
-		<div class="wp-block-buttons aligncenter"><!-- wp:button -->
-		<div class="wp-block-button"><a class="wp-block-button__link" href="https://www.youtube.com/watch?v=8qyP5abkoe4">Building Pages</a></div>
+		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+		<div class="wp-block-buttons"><!-- wp:button -->
+		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://www.youtube.com/watch?v=8qyP5abkoe4">Building Pages</a></div>
 		<!-- /wp:button --></div>
-		<!-- /wp:buttons --></div></div>
+		<!-- /wp:buttons --></div>
 		<!-- /wp:group --></div></div>
 		<!-- /wp:cover -->';
 
@@ -685,7 +685,7 @@ https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw
 				'categories'	=> array('COVERT NINE', 'header', 'buttons', 'text', 'Video', 'landingpage')
 			),
 		);
-
+		
 		$c9_video_embed_core = '<!-- wp:media-text {"mediaPosition":"right","mediaId":1935,"mediaLink":"#","mediaType":"video"} -->
 		<div class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile"><figure class="wp-block-media-text__media"><video controls src="' . esc_url($video_path_1) . '"></video></figure><div class="wp-block-media-text__content"><!-- wp:heading {"level":3} -->
 		<h3>Using C9 Blocks Plugin</h3>
