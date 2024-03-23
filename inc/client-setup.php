@@ -105,23 +105,23 @@ function c9starter_register_block_patterns_cat()
 	if (class_exists('WP_Block_Patterns_Registry')) {
 		register_block_pattern_category(
 			'COVERT NINE',
-			array('label' => __('C9 All Patterns', 'c9-togo'))
+			array('label' => __('C9 Togo All Patterns', 'c9-togo'))
 		);
 		register_block_pattern_category(
 			'landingpage',
-			array('label' => __('C9 Page Templates', 'c9-togo'))
+			array('label' => __('C9 Togo Page Templates', 'c9-togo'))
 		);
 		register_block_pattern_category(
 			'Video',
-			array('label' => __('C9 Video', 'c9-togo'))
+			array('label' => __('C9 Togo Video', 'c9-togo'))
 		);
 		register_block_pattern_category(
 			'Audio',
-			array('label' => __('C9 Audio', 'c9-togo'))
+			array('label' => __('C9 Togo Audio', 'c9-togo'))
 		);
 		register_block_pattern_category(
 			'Article',
-			array('label' => __('C9 Article', 'c9-togo'))
+			array('label' => __('C9 Togo Article', 'c9-togo'))
 		);
 	}
 }
@@ -137,13 +137,13 @@ function c9starter_register_block_patterns()
 		$theme_directory_uri = get_template_directory_uri();
 		$image_path_1 = $theme_directory_uri . '/client/client-assets/img/build-burger-ingredients.jpg';
 		$image_path_2 = $theme_directory_uri . '/client/client-assets/img/chips-guac-salsa.jpg';
-		$image_path_3 = $theme_directory_uri . '/client/client-assets/img/food-table-overview-shot-1024x683.jpg';
-		$image_path_4 = $theme_directory_uri . '/client/client-assets/img/burger-sausauge-fries-msutard-1024x672.jpg';
-		$image_path_5 = $theme_directory_uri . '/client/client-assets/img/chicken-wings-1024x683.jpg';
-		$image_path_6 = $theme_directory_uri . '/client/client-assets/img/tacos-1024x683.jpg';
+		$image_path_3 = $theme_directory_uri . '/client/client-assets/img/food-table-overview-shot.jpg';
+		$image_path_4 = $theme_directory_uri . '/client/client-assets/img/burger-sausauge-fries-msutard.jpg';
+		$image_path_5 = $theme_directory_uri . '/client/client-assets/img/chicken-wings.jpg';
+		$image_path_6 = $theme_directory_uri . '/client/client-assets/img/tacos.jpg';
 		$image_path_7 = $theme_directory_uri . '/client/client-assets/img/burger-sausauge-fries-msutard.jpg';
 		$video_path_1 = $theme_directory_uri . '/client/client-assets/img/c9-starter-templates-clip.mp4';
-		$logo_path = $theme_directory_uri . '/client/client-assets/img/feather-logo-gradient-rb.svg';
+		$logo_path = $theme_directory_uri . '/client/client-assets/img/togo__Pointing-1.png';
 		$audio_path_1 = $theme_directory_uri . '/client/client-assets/audio/pew-pew.m4a';
 
 		$c9_coming_soon_core_content = '<!-- wp:cover {"url":"' . esc_url($image_path_1) . '","id":2789,"dimRatio":80,"overlayColor":"color-primary","minHeight":995,"minHeightUnit":"px","align":"full"} -->
