@@ -487,7 +487,7 @@ https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"align":"center","id":3798,"width":51,"height":38,"sizeSlug":"large","linkDestination":"none"} -->
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized"><img src="' . esc_url($logo_path) . '" alt="" class="wp-image-3798" width="51" height="38"/></figure></div>
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="' . esc_url($logo_path) . '" alt="" class="wp-image-3798"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -622,7 +622,7 @@ https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw
 
 <!-- wp:column {"width":"10%"} -->
 <div class="wp-block-column" style="flex-basis:10%"><!-- wp:image {"id":3798,"width":51,"height":38,"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large is-resized"><img src="' . esc_url($logo_path) . '" alt="" class="wp-image-3798" width="51" height="38"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="' . esc_url($logo_path) . '" alt="" class="wp-image-3798" style="width:51px;height:38px" width="51" height="38"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
