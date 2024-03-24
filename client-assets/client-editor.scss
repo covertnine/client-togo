@@ -3,9 +3,27 @@
 /****************************************************************************************/
 @import "_client_variables";
 
+@media only screen and (min-width: 992px) {
+
+    .post-type-post .edit-post-visual-editor__post-title-wrapper,
+    .post-type-post .is-sidebar-opened .edit-post-visual-editor__post-title-wrapper {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
 body .editor-styles-wrapper {
     font-family: $font-family-base;
     padding: 0px;
+}
+
+.editor-post-title.wp-block,
+.post-type-page .editor-post-title.wp-block,
+.post-type-post .editor-post-title.wp-block {
+    font-size: 2.8rem;
+    letter-spacing: -.8px;
 }
 
 .editor-styles-wrapper .c9-block-post-grid-excerpt p {
