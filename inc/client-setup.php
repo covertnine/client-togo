@@ -139,7 +139,7 @@ function c9starter_register_block_patterns()
 		$image_path_2 = $theme_directory_uri . '/client/client-assets/img/chips-guac-salsa.jpg';
 		$image_path_3 = $theme_directory_uri . '/client/client-assets/img/food-table-overview-shot.jpg';
 		$image_path_4 = $theme_directory_uri . '/client/client-assets/img/burger-sausauge-fries-msutard.jpg';
-		$image_path_5 = $theme_directory_uri . '/client/client-assets/img/chicken-wings.jpg';
+		$image_path_5 = $theme_directory_uri . '/client/client-assets/img/chicken-wings-1024x683.jpg';
 		$image_path_6 = $theme_directory_uri . '/client/client-assets/img/tacos.jpg';
 		$image_path_7 = $theme_directory_uri . '/client/client-assets/img/burger-sausauge-fries-msutard.jpg';
 		$video_path_1 = $theme_directory_uri . '/client/client-assets/img/c9-starter-templates-clip.mp4';
